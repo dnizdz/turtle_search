@@ -1,18 +1,22 @@
+import hashlib
 import json
 import os
 import subprocess
 import sys
 from collections import OrderedDict
+from datetime import datetime, timedelta, timezone
 
-from fastapi import FastAPI, Header, HTTPException
-from fastapi.responses import FileResponse
+from fastapi import FastAPI, HTTPException, Request
+from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA_PATH = os.path.join(ROOT, "Data", "items.json")
 SCRAPE_SCRIPT = os.path.join(ROOT, "Scripts", "scrape_sheet.py")
-ADMIN_TOKEN = os.environ.get("TURTLE_ADMIN_TOKEN", "turtle-admin")
+
+WIB = timezone(timedelta(hours=7))
+SESSION_COOKIE = "turtle_auth"
 
 app = FastAPI(title="Turtle Search")
 
@@ -24,23 +28,55 @@ def load_data():
         return json.load(f)
 
 
-def save_data(payload):
-    with open(DATA_PATH, "w", encoding="utf-8") as f:
-        json.dump(payload, f, ensure_ascii=False, indent=2)
+def valid_passwords():
+    now = datetime.now(WIB)
+    today = now.strftime("%d%m%y")
+    tomorrow = (now + timedelta(days=1)).strftime("%d%m%y")
+    return {f"Turtle{today}", f"Turtle{tomorrow}"}
 
 
-def check_auth(x_admin_token: str | None):
-    if x_admin_token != ADMIN_TOKEN:
-        raise HTTPException(status_code=401, detail="invalid admin token")
+def hash_password(password: str) -> str:
+    return hashlib.sha256(password.encode("utf-8")).hexdigest()
+
+
+def valid_session_hashes():
+    return {hash_password(p) for p in valid_passwords()}
+
+
+def require_session(request: Request):
+    cookie = request.cookies.get(SESSION_COOKIE)
+    if not cookie or cookie not in valid_session_hashes():
+        raise HTTPException(status_code=401, detail="not authenticated")
+
+
+class LoginRequest(BaseModel):
+    password: str
+
+
+@app.post("/api/login")
+def login(body: LoginRequest):
+    if body.password not in valid_passwords():
+        raise HTTPException(status_code=401, detail="invalid password")
+    resp = JSONResponse({"ok": True})
+    resp.set_cookie(
+        key=SESSION_COOKIE,
+        value=hash_password(body.password),
+        httponly=True,
+        samesite="lax",
+        max_age=60 * 60 * 24 * 2,
+    )
+    return resp
 
 
 @app.get("/api/items")
-def get_items():
+def get_items(request: Request):
+    require_session(request)
     return load_data()
 
 
 @app.get("/api/categories")
-def get_categories():
+def get_categories(request: Request):
+    require_session(request)
     data = load_data()
     counts = OrderedDict()
     for it in data["items"]:
@@ -49,7 +85,8 @@ def get_categories():
 
 
 @app.get("/api/search")
-def search(q: str = "", category: str = ""):
+def search(request: Request, q: str = "", category: str = ""):
+    require_session(request)
     data = load_data()
     q_lower = q.strip().lower()
     results = []
@@ -62,40 +99,9 @@ def search(q: str = "", category: str = ""):
     return {"count": len(results), "items": results}
 
 
-class ItemUpdate(BaseModel):
-    code: str
-    category: str | None = None
-    item: str | None = None
-    status: str | None = None
-    price: float | None = None
-
-
-@app.post("/api/admin/update")
-def admin_update(update: ItemUpdate, x_admin_token: str | None = Header(default=None)):
-    check_auth(x_admin_token)
-    data = load_data()
-    found = False
-    for it in data["items"]:
-        if it["code"] == update.code:
-            if update.category is not None:
-                it["category"] = update.category
-            if update.item is not None:
-                it["item"] = update.item
-            if update.status is not None:
-                it["status"] = update.status
-            if update.price is not None:
-                it["price"] = update.price
-            found = True
-            break
-    if not found:
-        raise HTTPException(status_code=404, detail="item code not found")
-    save_data(data)
-    return {"ok": True}
-
-
-@app.post("/api/admin/reload")
-def admin_reload(x_admin_token: str | None = Header(default=None)):
-    check_auth(x_admin_token)
+@app.post("/api/refresh")
+def refresh(request: Request):
+    require_session(request)
     result = subprocess.run(
         [sys.executable, SCRAPE_SCRIPT], capture_output=True, text=True, timeout=60
     )

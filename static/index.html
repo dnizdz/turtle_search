@@ -4,51 +4,40 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Turtle Search</title>
-<link rel="stylesheet" href="/static/style.css">
+<link rel="stylesheet" href="/static/style.css?v=2">
 </head>
 <body>
-<header>
-  <h1>Turtle Search</h1>
-  <div class="menu-wrap">
-    <button id="menuBtn" aria-label="Admin menu">&#9881;</button>
-    <div id="menuPanel" class="hidden">
-      <label>Admin token
-        <input id="adminToken" type="password" placeholder="token">
-      </label>
-      <button id="reloadBtn">Reload from Sheet</button>
-      <div id="menuStatus"></div>
-    </div>
-  </div>
-</header>
-
-<main>
-  <div class="search-row">
-    <input id="searchBox" type="text" placeholder="Search item name...">
-    <span id="meta"></span>
-  </div>
-
-  <div id="categoryRow" class="category-row"></div>
-
-  <div id="cards" class="cards"></div>
-</main>
-
-<div id="editModal" class="modal hidden">
+<div id="loginOverlay" class="modal">
   <div class="modal-box">
-    <h3>Edit item</h3>
-    <div id="editForm">
-      <label>Item name <input id="editItem" type="text"></label>
-      <label>Category <input id="editCategory" type="text"></label>
-      <label>Status <input id="editStatus" type="text"></label>
-      <label>Discount price <input id="editPrice" type="number" step="1"></label>
-    </div>
+    <h3>Turtle Search</h3>
+    <label>Password
+      <input id="loginPassword" type="password" autocomplete="off">
+    </label>
     <div class="modal-actions">
-      <button id="saveEditBtn">Save</button>
-      <button id="cancelEditBtn">Cancel</button>
+      <button id="loginBtn">Enter</button>
     </div>
-    <div id="editStatusMsg"></div>
+    <div id="loginStatus"></div>
   </div>
 </div>
 
-<script src="/static/app.js?v=2"></script>
+<div id="appRoot" class="hidden">
+  <header>
+    <h1>Turtle Search</h1>
+    <button id="refreshBtn">Refresh</button>
+  </header>
+
+  <main>
+    <div class="search-row">
+      <input id="searchBox" type="text" placeholder="Search item name...">
+      <span id="meta"></span>
+    </div>
+
+    <div id="categoryRow" class="category-row"></div>
+
+    <div id="cards" class="cards"></div>
+  </main>
+</div>
+
+<script src="/static/app.js?v=3"></script>
 </body>
 </html>

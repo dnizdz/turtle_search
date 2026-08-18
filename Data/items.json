@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-18T15:47:03.096098+00:00",
-  "count": 267,
+  "updated_at": "2026-08-18T15:54:14.477618+00:00",
+  "count": 268,
   "items": [
     {
       "code": "1000",
@@ -834,6 +834,13 @@
       "item": "Scubapro Go Travel Fins - Barefoot, Boots is not needed - Kaki Katak Selam",
       "status": "UPDATED",
       "price": 1351350
+    },
+    {
+      "code": "1415",
+      "category": "FINS",
+      "item": "Scubapro Jet Fins Scuba Diving - Kaki Katak Selam",
+      "status": "UPDATED",
+      "price": 2477475
     },
     {
       "code": "1416",

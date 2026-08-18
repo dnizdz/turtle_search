@@ -5,6 +5,8 @@ const cardsEl = document.getElementById("cards");
 const categoryRowEl = document.getElementById("categoryRow");
 const metaEl = document.getElementById("meta");
 const searchBox = document.getElementById("searchBox");
+const loginOverlay = document.getElementById("loginOverlay");
+const appRoot = document.getElementById("appRoot");
 
 function fmtPrice(p) {
   return Math.round(Number(p)).toLocaleString("en-US");
@@ -28,7 +30,6 @@ function render() {
       <div class="price">${fmtPrice(it.price)}</div>
       <div class="status">${it.status || ""}</div>
     `;
-    card.addEventListener("click", () => openEdit(it));
     cardsEl.appendChild(card);
   }
 }
@@ -52,75 +53,73 @@ function renderCategories() {
 
 async function loadItems() {
   const res = await fetch("/api/items");
+  if (res.status === 401) {
+    showLogin();
+    return false;
+  }
   const data = await res.json();
   ALL_ITEMS = data.items || [];
   renderCategories();
   render();
+  return true;
+}
+
+function showLogin() {
+  appRoot.classList.add("hidden");
+  loginOverlay.classList.remove("hidden");
+}
+
+function showApp() {
+  loginOverlay.classList.add("hidden");
+  appRoot.classList.remove("hidden");
 }
 
 searchBox.addEventListener("input", render);
 
-// Admin menu
-const menuBtn = document.getElementById("menuBtn");
-const menuPanel = document.getElementById("menuPanel");
-menuBtn.addEventListener("click", () => menuPanel.classList.toggle("hidden"));
-document.addEventListener("click", (e) => {
-  if (!menuPanel.contains(e.target) && e.target !== menuBtn) menuPanel.classList.add("hidden");
+document.getElementById("refreshBtn").addEventListener("click", async () => {
+  const btn = document.getElementById("refreshBtn");
+  btn.disabled = true;
+  btn.textContent = "Refreshing...";
+  try {
+    const res = await fetch("/api/refresh", { method: "POST" });
+    if (res.status === 401) { showLogin(); return; }
+    if (!res.ok) throw new Error((await res.json()).detail || res.statusText);
+    await loadItems();
+  } catch (err) {
+    alert("Refresh failed: " + err.message);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "Refresh";
+  }
 });
 
-document.getElementById("reloadBtn").addEventListener("click", async () => {
-  const token = document.getElementById("adminToken").value;
-  const statusEl = document.getElementById("menuStatus");
-  statusEl.textContent = "Reloading...";
+async function tryLogin() {
+  const password = document.getElementById("loginPassword").value;
+  const statusEl = document.getElementById("loginStatus");
+  statusEl.textContent = "";
   try {
-    const res = await fetch("/api/admin/reload", { method: "POST", headers: { "X-Admin-Token": token } });
-    if (!res.ok) throw new Error((await res.json()).detail || res.statusText);
-    statusEl.textContent = "Reloaded.";
+    const res = await fetch("/api/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ password }),
+    });
+    if (!res.ok) {
+      statusEl.textContent = "Wrong password.";
+      return;
+    }
+    showApp();
     await loadItems();
   } catch (err) {
     statusEl.textContent = "Error: " + err.message;
   }
-});
-
-// Edit modal
-const editModal = document.getElementById("editModal");
-let editingCode = null;
-
-function openEdit(it) {
-  editingCode = it.code;
-  document.getElementById("editItem").value = it.item;
-  document.getElementById("editCategory").value = it.category;
-  document.getElementById("editStatus").value = it.status || "";
-  document.getElementById("editPrice").value = it.price;
-  document.getElementById("editStatusMsg").textContent = "";
-  editModal.classList.remove("hidden");
 }
 
-document.getElementById("cancelEditBtn").addEventListener("click", () => editModal.classList.add("hidden"));
-
-document.getElementById("saveEditBtn").addEventListener("click", async () => {
-  const token = document.getElementById("adminToken").value;
-  const msgEl = document.getElementById("editStatusMsg");
-  const payload = {
-    code: editingCode,
-    item: document.getElementById("editItem").value,
-    category: document.getElementById("editCategory").value,
-    status: document.getElementById("editStatus").value,
-    price: Math.round(parseFloat(document.getElementById("editPrice").value)),
-  };
-  try {
-    const res = await fetch("/api/admin/update", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "X-Admin-Token": token },
-      body: JSON.stringify(payload),
-    });
-    if (!res.ok) throw new Error((await res.json()).detail || res.statusText);
-    msgEl.textContent = "Saved.";
-    await loadItems();
-    setTimeout(() => editModal.classList.add("hidden"), 400);
-  } catch (err) {
-    msgEl.textContent = "Error: " + err.message;
-  }
+document.getElementById("loginBtn").addEventListener("click", tryLogin);
+document.getElementById("loginPassword").addEventListener("keydown", (e) => {
+  if (e.key === "Enter") tryLogin();
 });
 
-loadItems();
+(async function init() {
+  const ok = await loadItems();
+  if (ok) showApp();
+})();
