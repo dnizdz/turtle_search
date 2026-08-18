@@ -48,9 +48,9 @@ TURTLE_ADMIN_TOKEN=xxx uvicorn server:app --host 127.0.0.1 --port 8000
 - Same pattern as sibling app `advisory` (`/var/www/advisory`, `advisory.service`, `advisory.404advisory.live`): FastAPI + `venv` + systemd unit + nginx reverse proxy + certbot.
 - Deploy path: `/var/www/turtle` (git clone of `https://github.com/dnizdz/turtle_search`, pushed via SSH using the `github.com` alias in the same `~/.ssh/config`, key `finaldennisssh`).
 - Port: **8002** (8001 taken by `advisory`, 5432 by postgres — confirmed via `ss -tlnp` on 2026-08-18).
-- Domain: `turtle.404advisory.live`. **DNS was not resolving as of 2026-08-18** — SSL (certbot) step blocked until an A record for that subdomain points at 52.77.228.65. Until then, nginx serves plain HTTP on that server_name plus the bare IP.
-- systemd unit: `deploy/turtle.service` → copy to `/etc/systemd/system/turtle.service`, `systemctl daemon-reload && systemctl enable --now turtle`.
-- nginx: `deploy/turtle_http_only.conf` → copy to `/etc/nginx/sites-available/turtle`, symlink into `sites-enabled`, `nginx -t && systemctl reload nginx`. Once DNS resolves, run `certbot --nginx -d turtle.404advisory.live` (same as the `advisory`/`phpplayer` sites) — certbot rewrites the config to add the 443 block + redirect, matching the existing pattern.
+- Domain: `turtle.404advisory.live` — live over HTTPS (proxied through Cloudflare; origin IPs differ from 52.77.228.65 but forward through transparently). Cert issued via certbot 2026-08-18, expires 2026-11-16, auto-renews.
+- systemd unit: `deploy/turtle.service` installed at `/etc/systemd/system/turtle.service`, enabled + running.
+- nginx: `/etc/nginx/sites-available/turtle` (started from `deploy/turtle_http_only.conf`, then certbot rewrote it in place to add the 443 block + HTTP→HTTPS redirect — the checked-in `deploy/turtle_http_only.conf` no longer matches what's live on the server; treat the server's copy as authoritative for the nginx config).
 
 ## Rules
 - Admin token only from `.env` (`TURTLE_ADMIN_TOKEN`) — never hardcode or print in logs.

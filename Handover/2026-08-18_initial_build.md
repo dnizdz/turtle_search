@@ -16,8 +16,14 @@
 - `deploy/turtle_http_only.conf` installed as `/etc/nginx/sites-available/turtle`, enabled, `nginx -t` passed, reloaded.
 - Verified live: `curl http://52.77.228.65/` → 200, `/api/items` → 267 items. Also verified with `Host: turtle.404advisory.live` header → 200.
 
-## Still open / blockers
-- **DNS not resolving** for `turtle.404advisory.live` as of this session (`nslookup` → non-existent domain). Certbot SSL step is blocked until user adds an A record pointing to `52.77.228.65`. Site currently serves HTTP-only (no 443/cert yet) — run `sudo certbot --nginx -d turtle.404advisory.live` on the server once DNS is confirmed propagated.
+## SSL completed 2026-08-18 (same session, later)
+- DNS for `turtle.404advisory.live` resolved once checked again (proxied through Cloudflare — origin IPs differ from 52.77.228.65, e.g. 172.67.178.160/104.21.17.226; Cloudflare forwards to origin transparently).
+- Ran `sudo certbot --nginx -d turtle.404advisory.live --non-interactive --agree-tos -m dniz.destiny@gmail.com` on the server — succeeded. Cert at `/etc/letsencrypt/live/turtle.404advisory.live/`, expires 2026-11-16, auto-renewal scheduled by certbot.
+- nginx config auto-updated by certbot (443 block + HTTP→HTTPS redirect), same pattern as `advisory`/`phpplayer`.
+- Verified from the server: `https://turtle.404advisory.live/` → 200, `/api/items` → 267 items, `http://turtle.404advisory.live/` → 301 redirect to HTTPS.
+- Note: local dev machine's DNS resolver couldn't resolve the domain (unrelated flakiness — `Could not resolve host`), so verification was done via SSH from the server itself. If the user can't reach the site from their own machine, it's worth them flushing local DNS cache / retrying, not a server-side issue.
+
+## Still open
 - Frontend not opened in an actual browser yet — only API-level testing done (locally and on server). User should click through search/cards/admin-edit/reload once to confirm UX.
 - Admin auth is a single shared token (`TURTLE_ADMIN_TOKEN`), not per-user login — acceptable per user's brief ("menu on top right corner to edit"), no identity/roles requested.
 
