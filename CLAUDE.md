@@ -26,7 +26,7 @@ Google Sheet (public, link-viewable), URL configurable via `Data/config.json` (`
 Pulled via CSV export endpoint (`/export?format=csv&gid=...`), no auth needed.
 
 Columns (row 1 header: `CODE,Bucket,Item,,Status,Discount Price`):
-- A = code (used as unique key for edits)
+- A = code (unique identifier, not used elsewhere since item-edit was removed)
 - B = category (sheet calls it "Bucket")
 - C = item name
 - D = blank, ignored
