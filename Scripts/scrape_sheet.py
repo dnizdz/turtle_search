@@ -24,7 +24,7 @@ def parse_price(raw: str) -> float:
     if not raw:
         return 0.0
     try:
-        return float(raw)
+        return float(raw) * 1000
     except ValueError:
         return 0.0
 
