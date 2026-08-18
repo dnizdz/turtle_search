@@ -11,6 +11,9 @@ Turtle Search: searchable catalog site sourced from a public Google Sheet (dive 
 - `deploy/` — `turtle.service` (systemd unit), `turtle_http_only.conf` (initial nginx config before SSL)
 - `Handover/` — running handover doc
 
+## Visual design
+Light "Minimalism & Swiss Style" theme, chosen via the `ui-ux-pro-max` skill 2026-08-18 (product type: dive-gear/diving retail catalog). Trust-blue primary (`#2563EB`) + orange accent (`#EA580C`, references dive-flag colors), white cards on `#F8FAFC` background, dark-mode variant auto-applied via `prefers-color-scheme`. Type: Rubik (headings) + Nunito Sans (body), loaded from Google Fonts. All colors/spacing/radius are CSS custom properties in `static/style.css` (`--color-*`, `--space-*`, `--radius-*`) — change the design by editing tokens there, not by hunting for hardcoded values in markup. Icons are hand-written inline SVG (no icon font/CDN, no emoji). Touch targets kept ≥44px per mobile UX guidance (this app is primarily used on phone).
+
 ## Auth
 Site-wide password gate, no per-user accounts, no `.env`/token needed. Password is a **static** string, currently `qqqq`, hardcoded as `PASSWORD` in `server.py` (changed 2026-08-18 from an earlier rotating-daily-password scheme — user simplified it back to a fixed word, edit that constant + redeploy if it needs to change again).
 - `POST /api/login` — body `{password}` — on match, sets an httponly cookie (`turtle_auth`, 30-day max-age).

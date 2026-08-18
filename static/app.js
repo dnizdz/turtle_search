@@ -31,16 +31,30 @@ function render() {
   metaEl.textContent = `${filtered.length} item(s)`;
   cardsEl.innerHTML = "";
   for (const it of filtered) {
+    const statusClass = statusToClass(it.status);
     const card = document.createElement("div");
     card.className = "card";
     card.innerHTML = `
-      <div class="cat">${it.category}</div>
-      <div class="name">${it.item}</div>
+      <div class="cat">${escapeHtml(it.category)}</div>
+      <div class="name">${escapeHtml(it.item)}</div>
       <div class="price">${fmtPrice(it.price)}</div>
-      <div class="status">${it.status || ""}</div>
+      <div class="status ${statusClass}">${escapeHtml(it.status || "")}</div>
     `;
     cardsEl.appendChild(card);
   }
+}
+
+function statusToClass(status) {
+  const s = (status || "").toUpperCase();
+  if (s.includes("OOS") || s.includes("SOLD")) return "status-bad";
+  if (s.includes("UPDATED") || s.includes("READY")) return "status-good";
+  return "";
+}
+
+function escapeHtml(str) {
+  const div = document.createElement("div");
+  div.textContent = str;
+  return div.innerHTML;
 }
 
 function renderCategories() {
@@ -95,7 +109,7 @@ searchBox.addEventListener("input", render);
 document.getElementById("refreshBtn").addEventListener("click", async () => {
   const btn = document.getElementById("refreshBtn");
   btn.disabled = true;
-  btn.textContent = "...";
+  btn.classList.add("spinning");
   try {
     const res = await fetch("/api/refresh", { method: "POST" });
     if (res.status === 401) { showLogin(); return; }
@@ -106,7 +120,7 @@ document.getElementById("refreshBtn").addEventListener("click", async () => {
     showToast("Refresh failed: " + err.message, true);
   } finally {
     btn.disabled = false;
-    btn.textContent = "Refresh";
+    btn.classList.remove("spinning");
   }
 });
 
@@ -125,6 +139,7 @@ document.addEventListener("click", (e) => {
 document.getElementById("saveSheetBtn").addEventListener("click", async () => {
   const sheetUrl = document.getElementById("sheetUrl").value.trim();
   const statusEl = document.getElementById("menuStatus");
+  statusEl.className = "";
   statusEl.textContent = "Saving...";
   try {
     const res = await fetch("/api/config", {
@@ -137,6 +152,7 @@ document.getElementById("saveSheetBtn").addEventListener("click", async () => {
     statusEl.textContent = "Saved.";
     showToast("Spreadsheet link saved", false);
   } catch (err) {
+    statusEl.className = "error";
     statusEl.textContent = "Error: " + err.message;
     showToast("Save failed: " + err.message, true);
   }
@@ -154,12 +170,14 @@ async function tryLogin() {
       body: JSON.stringify({ password }),
     });
     if (!res.ok) {
+      statusEl.className = "error";
       statusEl.textContent = "Wrong password.";
       return;
     }
     showApp();
     await loadItems();
   } catch (err) {
+    statusEl.className = "error";
     statusEl.textContent = "Error: " + err.message;
   }
 }
