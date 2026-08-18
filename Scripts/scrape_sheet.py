@@ -19,14 +19,14 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT_PATH = os.path.join(ROOT, "Data", "items.json")
 
 
-def parse_price(raw: str) -> float:
+def parse_price(raw: str) -> int:
     raw = (raw or "").strip().replace(",", "")
     if not raw:
-        return 0.0
+        return 0
     try:
-        return float(raw) * 1000
+        return round(float(raw) * 1000)
     except ValueError:
-        return 0.0
+        return 0
 
 
 def fetch_items():

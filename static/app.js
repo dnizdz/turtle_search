@@ -7,7 +7,7 @@ const metaEl = document.getElementById("meta");
 const searchBox = document.getElementById("searchBox");
 
 function fmtPrice(p) {
-  return Number(p).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  return Math.round(Number(p)).toLocaleString("en-US");
 }
 
 function render() {
@@ -106,7 +106,7 @@ document.getElementById("saveEditBtn").addEventListener("click", async () => {
     item: document.getElementById("editItem").value,
     category: document.getElementById("editCategory").value,
     status: document.getElementById("editStatus").value,
-    price: parseFloat(document.getElementById("editPrice").value),
+    price: Math.round(parseFloat(document.getElementById("editPrice").value)),
   };
   try {
     const res = await fetch("/api/admin/update", {
