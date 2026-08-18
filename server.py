@@ -1,10 +1,10 @@
 import hashlib
 import json
 import os
+import re
 import subprocess
 import sys
 from collections import OrderedDict
-from datetime import datetime, timedelta, timezone
 
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import FileResponse, JSONResponse
@@ -13,10 +13,12 @@ from pydantic import BaseModel
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA_PATH = os.path.join(ROOT, "Data", "items.json")
+CONFIG_PATH = os.path.join(ROOT, "Data", "config.json")
 SCRAPE_SCRIPT = os.path.join(ROOT, "Scripts", "scrape_sheet.py")
 
-WIB = timezone(timedelta(hours=7))
+PASSWORD = "qqqq"
 SESSION_COOKIE = "turtle_auth"
+SESSION_VALUE = hashlib.sha256(PASSWORD.encode("utf-8")).hexdigest()
 
 app = FastAPI(title="Turtle Search")
 
@@ -28,24 +30,34 @@ def load_data():
         return json.load(f)
 
 
-def valid_passwords():
-    now = datetime.now(WIB)
-    today = now.strftime("%d%m%y")
-    tomorrow = (now + timedelta(days=1)).strftime("%d%m%y")
-    return {f"Turtle{today}", f"Turtle{tomorrow}"}
+def load_config():
+    if not os.path.exists(CONFIG_PATH):
+        return {"sheet_url": ""}
+    with open(CONFIG_PATH, "r", encoding="utf-8") as f:
+        return json.load(f)
 
 
-def hash_password(password: str) -> str:
-    return hashlib.sha256(password.encode("utf-8")).hexdigest()
+def save_config(cfg):
+    os.makedirs(os.path.dirname(CONFIG_PATH), exist_ok=True)
+    with open(CONFIG_PATH, "w", encoding="utf-8") as f:
+        json.dump(cfg, f, ensure_ascii=False, indent=2)
 
 
-def valid_session_hashes():
-    return {hash_password(p) for p in valid_passwords()}
+SHEET_ID_RE = re.compile(r"/d/([a-zA-Z0-9-_]+)")
+GID_RE = re.compile(r"[?&#]gid=(\d+)")
+
+
+def parse_sheet_url(url: str):
+    id_match = SHEET_ID_RE.search(url)
+    if not id_match:
+        return None
+    gid_match = GID_RE.search(url)
+    return {"sheet_id": id_match.group(1), "gid": gid_match.group(1) if gid_match else "0"}
 
 
 def require_session(request: Request):
     cookie = request.cookies.get(SESSION_COOKIE)
-    if not cookie or cookie not in valid_session_hashes():
+    if not cookie or cookie != SESSION_VALUE:
         raise HTTPException(status_code=401, detail="not authenticated")
 
 
@@ -55,15 +67,15 @@ class LoginRequest(BaseModel):
 
 @app.post("/api/login")
 def login(body: LoginRequest):
-    if body.password not in valid_passwords():
+    if body.password != PASSWORD:
         raise HTTPException(status_code=401, detail="invalid password")
     resp = JSONResponse({"ok": True})
     resp.set_cookie(
         key=SESSION_COOKIE,
-        value=hash_password(body.password),
+        value=SESSION_VALUE,
         httponly=True,
         samesite="lax",
-        max_age=60 * 60 * 24 * 2,
+        max_age=60 * 60 * 24 * 30,
     )
     return resp
 
@@ -97,6 +109,26 @@ def search(request: Request, q: str = "", category: str = ""):
             continue
         results.append(it)
     return {"count": len(results), "items": results}
+
+
+@app.get("/api/config")
+def get_config(request: Request):
+    require_session(request)
+    return load_config()
+
+
+class ConfigUpdate(BaseModel):
+    sheet_url: str
+
+
+@app.post("/api/config")
+def update_config(body: ConfigUpdate, request: Request):
+    require_session(request)
+    parsed = parse_sheet_url(body.sheet_url)
+    if not parsed:
+        raise HTTPException(status_code=400, detail="could not parse a sheet ID from that URL")
+    save_config({"sheet_url": body.sheet_url})
+    return {"ok": True}
 
 
 @app.post("/api/refresh")

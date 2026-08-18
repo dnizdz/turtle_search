@@ -7,9 +7,18 @@ const metaEl = document.getElementById("meta");
 const searchBox = document.getElementById("searchBox");
 const loginOverlay = document.getElementById("loginOverlay");
 const appRoot = document.getElementById("appRoot");
+const toastEl = document.getElementById("toast");
 
 function fmtPrice(p) {
   return Math.round(Number(p)).toLocaleString("en-US");
+}
+
+let toastTimer = null;
+function showToast(message, isError) {
+  toastEl.textContent = message;
+  toastEl.className = "toast" + (isError ? " error" : " success");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toastEl.classList.add("hidden"), 2500);
 }
 
 function render() {
@@ -64,6 +73,13 @@ async function loadItems() {
   return true;
 }
 
+async function loadConfig() {
+  const res = await fetch("/api/config");
+  if (res.status === 401) return;
+  const cfg = await res.json();
+  document.getElementById("sheetUrl").value = cfg.sheet_url || "";
+}
+
 function showLogin() {
   appRoot.classList.add("hidden");
   loginOverlay.classList.remove("hidden");
@@ -79,20 +95,54 @@ searchBox.addEventListener("input", render);
 document.getElementById("refreshBtn").addEventListener("click", async () => {
   const btn = document.getElementById("refreshBtn");
   btn.disabled = true;
-  btn.textContent = "Refreshing...";
+  btn.textContent = "...";
   try {
     const res = await fetch("/api/refresh", { method: "POST" });
     if (res.status === 401) { showLogin(); return; }
     if (!res.ok) throw new Error((await res.json()).detail || res.statusText);
     await loadItems();
+    showToast("Refreshed", false);
   } catch (err) {
-    alert("Refresh failed: " + err.message);
+    showToast("Refresh failed: " + err.message, true);
   } finally {
     btn.disabled = false;
     btn.textContent = "Refresh";
   }
 });
 
+// Menu (spreadsheet link)
+const menuBtn = document.getElementById("menuBtn");
+const menuPanel = document.getElementById("menuPanel");
+menuBtn.addEventListener("click", async () => {
+  const opening = menuPanel.classList.contains("hidden");
+  menuPanel.classList.toggle("hidden");
+  if (opening) await loadConfig();
+});
+document.addEventListener("click", (e) => {
+  if (!menuPanel.contains(e.target) && e.target !== menuBtn) menuPanel.classList.add("hidden");
+});
+
+document.getElementById("saveSheetBtn").addEventListener("click", async () => {
+  const sheetUrl = document.getElementById("sheetUrl").value.trim();
+  const statusEl = document.getElementById("menuStatus");
+  statusEl.textContent = "Saving...";
+  try {
+    const res = await fetch("/api/config", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ sheet_url: sheetUrl }),
+    });
+    if (res.status === 401) { showLogin(); return; }
+    if (!res.ok) throw new Error((await res.json()).detail || res.statusText);
+    statusEl.textContent = "Saved.";
+    showToast("Spreadsheet link saved", false);
+  } catch (err) {
+    statusEl.textContent = "Error: " + err.message;
+    showToast("Save failed: " + err.message, true);
+  }
+});
+
+// Login
 async function tryLogin() {
   const password = document.getElementById("loginPassword").value;
   const statusEl = document.getElementById("loginStatus");

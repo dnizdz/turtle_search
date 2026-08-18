@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <title>Turtle Search</title>
-<link rel="stylesheet" href="/static/style.css?v=2">
+<link rel="stylesheet" href="/static/style.css?v=3">
 </head>
 <body>
 <div id="loginOverlay" class="modal">
   <div class="modal-box">
     <h3>Turtle Search</h3>
     <label>Password
-      <input id="loginPassword" type="password" autocomplete="off">
+      <input id="loginPassword" type="password" autocomplete="off" inputmode="text">
     </label>
     <div class="modal-actions">
       <button id="loginBtn">Enter</button>
@@ -23,14 +23,26 @@
 <div id="appRoot" class="hidden">
   <header>
     <h1>Turtle Search</h1>
-    <button id="refreshBtn">Refresh</button>
+    <div class="header-actions">
+      <button id="refreshBtn">Refresh</button>
+      <div class="menu-wrap">
+        <button id="menuBtn" aria-label="Menu">&#8942;</button>
+        <div id="menuPanel" class="hidden">
+          <label>Spreadsheet link
+            <input id="sheetUrl" type="text" placeholder="https://docs.google.com/spreadsheets/...">
+          </label>
+          <button id="saveSheetBtn">Save</button>
+          <div id="menuStatus"></div>
+        </div>
+      </div>
+    </div>
   </header>
 
   <main>
     <div class="search-row">
       <input id="searchBox" type="text" placeholder="Search item name...">
-      <span id="meta"></span>
     </div>
+    <div id="meta" class="meta-row"></div>
 
     <div id="categoryRow" class="category-row"></div>
 
@@ -38,6 +50,8 @@
   </main>
 </div>
 
-<script src="/static/app.js?v=3"></script>
+<div id="toast" class="toast hidden"></div>
+
+<script src="/static/app.js?v=4"></script>
 </body>
 </html>

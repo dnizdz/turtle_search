@@ -12,14 +12,14 @@ Turtle Search: searchable catalog site sourced from a public Google Sheet (dive 
 - `Handover/` — running handover doc
 
 ## Auth
-Site-wide password gate, no per-user accounts, no `.env`/token needed. Password pattern: `Turtle` + `DDMMYY` (day/month/2-digit-year), computed server-side from the current date in **Asia/Jakarta (WIB, UTC+7)** — e.g. 2026-08-18 → `Turtle180826`. Both **today's and tomorrow's** password are accepted at any time (rolling grace window so the password doesn't hard-cut at midnight) — this is deliberate per user request, not a bug.
-- `POST /api/login` — body `{password}` — on match, sets an httponly cookie (`turtle_auth`, 2-day max-age) whose value is a hash of the password used.
-- All data/action endpoints (`/api/items`, `/api/search`, `/api/categories`, `/api/refresh`) require that cookie and re-validate it against the *current* valid-password set on every request (stateless — no server-side session store, so a restart doesn't invalidate active sessions, but a cookie naturally stops working once its password falls outside the rolling today/tomorrow window, forcing re-login roughly every 1-2 days).
+Site-wide password gate, no per-user accounts, no `.env`/token needed. Password is a **static** string, currently `qqqq`, hardcoded as `PASSWORD` in `server.py` (changed 2026-08-18 from an earlier rotating-daily-password scheme — user simplified it back to a fixed word, edit that constant + redeploy if it needs to change again).
+- `POST /api/login` — body `{password}` — on match, sets an httponly cookie (`turtle_auth`, 30-day max-age).
+- All data/action endpoints (`/api/items`, `/api/search`, `/api/categories`, `/api/config`, `/api/refresh`) require that cookie.
 - `/` and `/static/*` are NOT gated (the page shell and JS load freely) — only the data API is gated. The frontend shows a login overlay whenever `/api/items` returns 401.
-- No admin token, no per-item edit feature — removed per user request 2026-08-18 once the site-wide password made the separate token redundant. Cards are display-only now.
+- No admin token, no per-item edit feature — cards are display-only.
 
 ## Data source
-Google Sheet (public, link-viewable): `https://docs.google.com/spreadsheets/d/1NguyO_DeDRGLh6UgDQYRqhdwMmmP3H0V-43Bwix9sqM/edit?gid=1809562695`
+Google Sheet (public, link-viewable), URL configurable via `Data/config.json` (`{"sheet_url": "..."}`), editable from the site's top-right menu ("Spreadsheet link" field + Save — no separate auth beyond the site password). `Scripts/scrape_sheet.py` parses `sheet_id` and `gid` out of that URL with regex (`/d/<id>`, `gid=<n>`) and falls back to a hardcoded default sheet if `config.json` is missing or the URL doesn't parse. Default/original sheet: `https://docs.google.com/spreadsheets/d/1NguyO_DeDRGLh6UgDQYRqhdwMmmP3H0V-43Bwix9sqM/edit?gid=1809562695`.
 Pulled via CSV export endpoint (`/export?format=csv&gid=...`), no auth needed.
 
 Columns (row 1 header: `CODE,Bucket,Item,,Status,Discount Price`):
@@ -42,13 +42,16 @@ uvicorn server:app --host 127.0.0.1 --port 8000
 - `GET /api/items` — full dataset (requires session cookie)
 - `GET /api/search?q=&category=` — filtered by item-name substring and/or category (requires session cookie)
 - `GET /api/categories` — category list with counts (requires session cookie)
-- `POST /api/refresh` — re-runs `Scripts/scrape_sheet.py` to refresh `Data/items.json` from the sheet (requires session cookie)
+- `GET /api/config` — current `{sheet_url}` (requires session cookie)
+- `POST /api/config` — body `{sheet_url}` — validates it parses to a sheet ID, saves to `Data/config.json` (requires session cookie)
+- `POST /api/refresh` — re-runs `Scripts/scrape_sheet.py` (reads `Data/config.json` for which sheet) to refresh `Data/items.json` (requires session cookie)
 
 ## Frontend behavior
+- Mobile-first layout (primary usage is phone) — single-column cards below 480px, sticky header, horizontally-scrollable category chip row, large tap targets.
 - Login overlay on load if not authenticated; password field posts to `/api/login`.
 - Search box filters live by item name (column C).
 - Category chips filter by category (column B). Cards are display-only (category, item name, price, status) — no edit.
-- Top-right Refresh button calls `/api/refresh` and re-renders with the latest sheet data.
+- Header: Refresh button (calls `/api/refresh`, re-renders, shows a small bottom toast — "Refreshed" or "Refresh failed: ...") and a "⋮" menu button opening a panel with the spreadsheet-link field + Save (calls `/api/config`, also toasts on save/error).
 
 ## Deployment (Lightsail server 52.77.228.65)
 - SSH: `ssh lightsail-52.77.228.65` (config alias already set in `~/.ssh/config`, key `finaldennisssh`, user `ubuntu`, sudo passwordless).
@@ -60,5 +63,5 @@ uvicorn server:app --host 127.0.0.1 --port 8000
 - nginx: `/etc/nginx/sites-available/turtle` (started from `deploy/turtle_http_only.conf`, then certbot rewrote it in place to add the 443 block + HTTP→HTTPS redirect — the checked-in `deploy/turtle_http_only.conf` no longer matches what's live on the server; treat the server's copy as authoritative for the nginx config).
 
 ## Rules
-- `Data/items.json` is always overwritten wholesale by `/api/refresh` (Scripts/scrape_sheet.py) — the sheet is the sole source of truth, no manual edit path exists anymore.
-- Password is derived algorithmically (`Turtle` + WIB date), never stored/printed — do not hardcode a specific day's password anywhere outside this doc's example.
+- `Data/items.json` is always overwritten wholesale by `/api/refresh` (Scripts/scrape_sheet.py) — the sheet is the sole source of truth, no manual item-edit path exists.
+- `Data/config.json` holds the editable sheet URL — anyone past the site password can change it via the menu; this is intentional (no separate admin gate requested), not an oversight.
