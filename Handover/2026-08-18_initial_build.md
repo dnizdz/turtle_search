@@ -8,10 +8,17 @@
 - `deploy/turtle.service` (systemd unit, port 8002) and `deploy/turtle_http_only.conf` (nginx, HTTP-only until SSL) written, matching the existing `advisory` app's deployment pattern on the server.
 - Confirmed via SSH: server reachable, sudo passwordless, ports free — chose 8002 (8001 taken by `advisory`).
 
+## Deploy completed 2026-08-18
+- Pushed to `git@github.com:dnizdz/turtle_search.git` (main branch).
+- Cloned into `/var/www/turtle` on the server, venv created, deps installed.
+- `.env` written on server with a freshly generated `TURTLE_ADMIN_TOKEN` (given to user in chat, not stored in repo — `.env` is gitignored, perms 600).
+- `turtle.service` installed and running (systemd, port 8002, `enabled` so it survives reboot).
+- `deploy/turtle_http_only.conf` installed as `/etc/nginx/sites-available/turtle`, enabled, `nginx -t` passed, reloaded.
+- Verified live: `curl http://52.77.228.65/` → 200, `/api/items` → 267 items. Also verified with `Host: turtle.404advisory.live` header → 200.
+
 ## Still open / blockers
-- **DNS not resolving** for `turtle.404advisory.live` as of this session (`nslookup` → non-existent domain). Certbot SSL step is blocked until user adds an A record pointing to `52.77.228.65`. Site will run HTTP-only until then.
-- Not yet done in this session (pending, will continue): git init + push to `https://github.com/dnizdz/turtle_search`, actual server deploy (clone repo into `/var/www/turtle`, venv setup, systemd enable, nginx enable).
-- Frontend not opened in an actual browser yet — only API-level testing done locally.
+- **DNS not resolving** for `turtle.404advisory.live` as of this session (`nslookup` → non-existent domain). Certbot SSL step is blocked until user adds an A record pointing to `52.77.228.65`. Site currently serves HTTP-only (no 443/cert yet) — run `sudo certbot --nginx -d turtle.404advisory.live` on the server once DNS is confirmed propagated.
+- Frontend not opened in an actual browser yet — only API-level testing done (locally and on server). User should click through search/cards/admin-edit/reload once to confirm UX.
 - Admin auth is a single shared token (`TURTLE_ADMIN_TOKEN`), not per-user login — acceptable per user's brief ("menu on top right corner to edit"), no identity/roles requested.
 
 ## Decisions made without explicit user sign-off (flag if wrong)
