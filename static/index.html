@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Turtle Search</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <h1>Turtle Search</h1>
+  <div class="menu-wrap">
+    <button id="menuBtn" aria-label="Admin menu">&#9881;</button>
+    <div id="menuPanel" class="hidden">
+      <label>Admin token
+        <input id="adminToken" type="password" placeholder="token">
+      </label>
+      <button id="reloadBtn">Reload from Sheet</button>
+      <div id="menuStatus"></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="search-row">
+    <input id="searchBox" type="text" placeholder="Search item name...">
+    <span id="meta"></span>
+  </div>
+
+  <div id="categoryRow" class="category-row"></div>
+
+  <div id="cards" class="cards"></div>
+</main>
+
+<div id="editModal" class="modal hidden">
+  <div class="modal-box">
+    <h3>Edit item</h3>
+    <div id="editForm">
+      <label>Item name <input id="editItem" type="text"></label>
+      <label>Category <input id="editCategory" type="text"></label>
+      <label>Status <input id="editStatus" type="text"></label>
+      <label>Discount price <input id="editPrice" type="number" step="0.01"></label>
+    </div>
+    <div class="modal-actions">
+      <button id="saveEditBtn">Save</button>
+      <button id="cancelEditBtn">Cancel</button>
+    </div>
+    <div id="editStatusMsg"></div>
+  </div>
+</div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

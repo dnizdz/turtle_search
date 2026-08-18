@@ -1,0 +1,1875 @@
+{
+  "updated_at": "2026-08-18T15:35:06.223399+00:00",
+  "count": 267,
+  "items": [
+    {
+      "code": "1000",
+      "category": "ACC",
+      "item": "Scubapro Hose Protector BLACK Scuba Diving - Pelindung Selang Selam Black",
+      "status": "UPDATED",
+      "price": 69.3
+    },
+    {
+      "code": "1001",
+      "category": "ACC",
+      "item": "Scubapro Hose Protector COLORED Scuba Diving - Pelindung Selang Selam",
+      "status": "UPDATED",
+      "price": 97.02
+    },
+    {
+      "code": "1002",
+      "category": "ACC",
+      "item": "Scubapro SMB 3.5ft 110cm 210D Nylon Orange- Surface Marker Buoy Scuba Diving",
+      "status": "UPDATED",
+      "price": 970.2
+    },
+    {
+      "code": "1003",
+      "category": "ACC",
+      "item": "Scubapro SMB 4.5ft 140cm 210D Nylon Orange- Surface Marker Buoy Scuba Diving",
+      "status": "UPDATED",
+      "price": 1212.75
+    },
+    {
+      "code": "1004",
+      "category": "ACC",
+      "item": "Scubapro SMB 6ft 180cm 210D Nylon Orange- Surface Marker Buoy Scuba Diving",
+      "status": "UPDATED",
+      "price": 1299.375
+    },
+    {
+      "code": "1005",
+      "category": "ACC",
+      "item": "Scubapro Mouthpiece Set Scuba Diving - Aksesoris Selam",
+      "status": "UPDATED",
+      "price": 311.85
+    },
+    {
+      "code": "1006",
+      "category": "ACC",
+      "item": "Scubapro Inflator Hose Scuba Diving - Selang Selam",
+      "status": "PRICE FINAL, NOT YET UPLOADED",
+      "price": 1127.25
+    },
+    {
+      "code": "1007",
+      "category": "REGU",
+      "item": "Scubapro MK25 EVO/S620 TI 1st stage Regulator Diving - Selam",
+      "status": "OOS",
+      "price": 15555.375
+    },
+    {
+      "code": "1008",
+      "category": "REGU",
+      "item": "Scubapro MK25 EVO/S600 1st stage Regulator + Octopus R195 Diving - Selam",
+      "status": "UPDATED",
+      "price": 14785.5
+    },
+    {
+      "code": "1009",
+      "category": "REGU",
+      "item": "Scubapro MK25 EVO/S600 1st stage Regulator + Octopus R195 + Console 2in1 Diving - Selam",
+      "status": "UPDATED",
+      "price": 18339.9
+    },
+    {
+      "code": "1010",
+      "category": "REGU",
+      "item": "Scubapro MK2 R095 + Console 2in1 + Octopus R095 - Selam",
+      "status": "OOS",
+      "price": 10350.0
+    },
+    {
+      "code": "1011",
+      "category": "REGU",
+      "item": "Scubapro SPG Single",
+      "status": "OOS",
+      "price": 2295.0
+    },
+    {
+      "code": "1012",
+      "category": "REGU",
+      "item": "Scubapro MK2 EVO/R195 1st stage Regulator Diving - Selam",
+      "status": "OOS",
+      "price": 6536.4
+    },
+    {
+      "code": "1013",
+      "category": "REGU",
+      "item": "Scubapro MK2 EVO/R105 1st stage Regulator Diving - Selam",
+      "status": "OOS",
+      "price": 5735.063
+    },
+    {
+      "code": "1101",
+      "category": "BCD",
+      "item": "Scubapro HYDROS PRO BCD MEN Scuba Diving - BCD Selam Pria",
+      "status": "UPDATED",
+      "price": 15557.85
+    },
+    {
+      "code": "1102",
+      "category": "BCD",
+      "item": "Scubapro HYDROS PRO BCD WOMEN Scuba Diving - BCD Selam Wanita",
+      "status": "UPDATED",
+      "price": 15557.85
+    },
+    {
+      "code": "1103",
+      "category": "BCD",
+      "item": "Scubapro HYDROS PRO BCD + Color Kit",
+      "status": "UPDATED",
+      "price": 16356.45
+    },
+    {
+      "code": "1104",
+      "category": "ACC",
+      "item": "Scubapro HYDROS PRO Color Kits",
+      "status": "UPDATED",
+      "price": 798.6
+    },
+    {
+      "code": "1105",
+      "category": "BCD",
+      "item": "Scubapro HYDROS X BCD Scuba Diving - BCD Selam",
+      "status": "UPDATED",
+      "price": 17636.85
+    },
+    {
+      "code": "1106",
+      "category": "BCD",
+      "item": "Scubapro X-Black BCD Scuba Diving - BCD Selam",
+      "status": "UPDATED",
+      "price": 17325.0
+    },
+    {
+      "code": "1107",
+      "category": "BCD",
+      "item": "Scubapro Level BCD Scuba Diving - BCD Selam",
+      "status": "UPDATED",
+      "price": 9702.0
+    },
+    {
+      "code": "1108",
+      "category": "BCD",
+      "item": "Scubapro Glide BCD Scuba Diving - BCD Selam",
+      "status": "UPDATED",
+      "price": 10568.25
+    },
+    {
+      "code": "1109",
+      "category": "BCD",
+      "item": "Scubapro GO (Travel) BCD Scuba Diving - Selam",
+      "status": "NO Competitor, Updated",
+      "price": 10741.5
+    },
+    {
+      "code": "1110",
+      "category": "BCD",
+      "item": "Scubapro T-One BCD Scuba Diving - Selam",
+      "status": "UPDATED",
+      "price": 8108.1
+    },
+    {
+      "code": "1111",
+      "category": "BCD",
+      "item": "Scubapro Rebel (Xtra Small/Junior Diver) BCD Scuba Diving - Selam Anak-Anak",
+      "status": "UPDATED",
+      "price": 7449.75
+    },
+    {
+      "code": "1112",
+      "category": "BCD",
+      "item": "Scubapro Seahawk 2 BCD Scuba Diving - Selam",
+      "status": "UPDATED",
+      "price": 10048.5
+    },
+    {
+      "code": "1113",
+      "category": "BCD",
+      "item": "Scubapro Classic Adventure 2 BCD Scuba Diving - BCD Selam",
+      "status": "NO Competitor, Updated",
+      "price": 15592.5
+    },
+    {
+      "code": "1114",
+      "category": "BCD",
+      "item": "Scubapro Classic Zero G BCD Scuba Diving - BCD Selam",
+      "status": "NO Competitor, Updated",
+      "price": 11088.0
+    },
+    {
+      "code": "1115",
+      "category": "BCD",
+      "item": "Scubapro Classic Zero G TPU BCD Scuba Diving - BCD Selam",
+      "status": "NO Competitor, Updated",
+      "price": 13513.5
+    },
+    {
+      "code": "1116",
+      "category": "BCD",
+      "item": "Scubapro Classic Abby CB WOMEN BCD Scuba Diving - BCD Selam",
+      "status": "NO Competitor, Updated",
+      "price": 10741.5
+    },
+    {
+      "code": "1201",
+      "category": "STEK",
+      "item": "Scubapro S-TEK Donut Wing 30 - BCD Donat Selam",
+      "status": "NO Competitor, Updated",
+      "price": 7796.25
+    },
+    {
+      "code": "1202",
+      "category": "STEK",
+      "item": "Scubapro S-TEK Donut Wing 40 - BCD Donat Selam",
+      "status": "NO Competitor, Updated",
+      "price": 8489.25
+    },
+    {
+      "code": "1203",
+      "category": "STEK",
+      "item": "Scubapro S-TEK Donut Wing 60 - BCD Donat Selam",
+      "status": "NO Competitor, Updated",
+      "price": 8662.5
+    },
+    {
+      "code": "1204",
+      "category": "BCD",
+      "item": "Scubapro S-TEK Donut Wing 30 + S-Tek PRO Harness SS + STA - BCD Donat set",
+      "status": "PRICE FINAL, NOT YET UPLOADED",
+      "price": 16108.785
+    },
+    {
+      "code": "1205",
+      "category": "BCD",
+      "item": "Scubapro S-TEK Donut Wing 30 + S-Tek PURE Harness SS + STA - BCD Donat set",
+      "status": "PRICE FINAL, NOT YET UPLOADED",
+      "price": 14469.84
+    },
+    {
+      "code": "1206",
+      "category": "BCD",
+      "item": "Scubapro S-TEK Donut Wing 40 + S-Tek PRO Harness SS - BCD Donat set",
+      "status": "PRICE FINAL, NOT YET UPLOADED",
+      "price": 14268.87
+    },
+    {
+      "code": "1207",
+      "category": "BCD",
+      "item": "Scubapro S-TEK Donut Wing 40 + S-Tek PURE Harness SS - BCD Donat set",
+      "status": "PRICE FINAL, NOT YET UPLOADED",
+      "price": 12629.925
+    },
+    {
+      "code": "1208",
+      "category": "BCD",
+      "item": "Scubapro S-TEK Donut Wing 60 + S-Tek PRO Harness SS - BCD Donat set",
+      "status": "PRICE FINAL, NOT YET UPLOADED",
+      "price": 14424.795
+    },
+    {
+      "code": "1209",
+      "category": "BCD",
+      "item": "Scubapro S-TEK Donut Wing 60 + S-Tek PURE Harness SS - BCD Donat set",
+      "status": "PRICE FINAL, NOT YET UPLOADED",
+      "price": 12785.85
+    },
+    {
+      "code": "1210",
+      "category": "ACC",
+      "item": "Scubapro S-TEK Trim Weights Kit mount on BackPlate Scuba Diving - Aksesoris Selam",
+      "status": "NO Competitor",
+      "price": 762.3
+    },
+    {
+      "code": "1211",
+      "category": "ACC",
+      "item": "Scubapro S-TEK Trim Weights Kit mount on WaistStrap Scuba Diving - Aksesoris Selam",
+      "status": "NO Competitor",
+      "price": 762.3
+    },
+    {
+      "code": "1212",
+      "category": "ACC",
+      "item": "Scubapro S-TEK Expedition Thigh Pocket Scuba Diving - Aksesoris Selam",
+      "status": "NO Competitor",
+      "price": 1016.4
+    },
+    {
+      "code": "1213",
+      "category": "ACC",
+      "item": "Scubapro S-TEK Expedition Reels 330 Scuba Diving - Aksesoris Selam",
+      "status": "NO Competitor",
+      "price": 3993.0
+    },
+    {
+      "code": "1214",
+      "category": "ACC",
+      "item": "Scubapro S-TEK Expedition Reels 660 Scuba Diving - Aksesoris Selam",
+      "status": "NO Competitor",
+      "price": 4537.5
+    },
+    {
+      "code": "1215",
+      "category": "ACC",
+      "item": "Scubapro S-TEK Spinner Spools 50 Scuba Diving - Aksesoris Selam",
+      "status": "NO Competitor",
+      "price": 925.65
+    },
+    {
+      "code": "1216",
+      "category": "ACC",
+      "item": "Scubapro S-TEK Spinner Spools 100 Scuba Diving - Aksesoris Selam",
+      "status": "NO Competitor",
+      "price": 1016.4
+    },
+    {
+      "code": "1217",
+      "category": "ACC",
+      "item": "Scubapro S-TEK Spinner Spools 150 Scuba Diving - Aksesoris Selam",
+      "status": "NO Competitor",
+      "price": 1107.15
+    },
+    {
+      "code": "1218",
+      "category": "ACC",
+      "item": "Scubapro S-TEK Stage Kit LOW PROFILE 40 Scuba Diving - Aksesoris Selam",
+      "status": "NO Competitor",
+      "price": 1197.9
+    },
+    {
+      "code": "1219",
+      "category": "ACC",
+      "item": "Scubapro S-TEK Stage Kit LOW PROFILE 80 Scuba Diving - Aksesoris Selam",
+      "status": "NO Competitor",
+      "price": 1197.9
+    },
+    {
+      "code": "1220",
+      "category": "ACC",
+      "item": "Scubapro S-TEK Stage Kit COLD WATER 40 Scuba Diving - Aksesoris Selam",
+      "status": "NO Competitor",
+      "price": 1197.9
+    },
+    {
+      "code": "1221",
+      "category": "ACC",
+      "item": "Scubapro S-TEK Stage Kit COLD WATER 80 Scuba Diving - Aksesoris Selam",
+      "status": "NO Competitor",
+      "price": 1197.9
+    },
+    {
+      "code": "1222",
+      "category": "ACC",
+      "item": "Scubapro Stage Rigging Kit Scuba Diving - Alat Selam",
+      "status": "OOS",
+      "price": 495.0
+    },
+    {
+      "code": "1301",
+      "category": "WETSUIT",
+      "item": "Scubapro Everflex Yulex 3/2 Steamer Wetsuit WOMEN Scuba Diving - Baju Selam",
+      "status": "PRICE FINAL, NOT YET UPLOADED",
+      "price": 7553.7
+    },
+    {
+      "code": "1302",
+      "category": "WETSUIT",
+      "item": "Scubapro Everflex Yulex 3/2 Steamer Wetsuit MEN Scuba Diving - Baju Selam",
+      "status": "PRICE FINAL, NOT YET UPLOADED",
+      "price": 7553.7
+    },
+    {
+      "code": "1303",
+      "category": "WETSUIT",
+      "item": "Scubapro Everflex Yulex 5/4 Steamer Wetsuit WOMEN Scuba Diving - Baju Selam",
+      "status": "PRICE FINAL, NOT YET UPLOADED",
+      "price": 9355.5
+    },
+    {
+      "code": "1304",
+      "category": "WETSUIT",
+      "item": "Scubapro Everflex Yulex 5/4 Steamer Wetsuit MEN Scuba Diving - Baju Selam",
+      "status": "PRICE FINAL, NOT YET UPLOADED",
+      "price": 9355.5
+    },
+    {
+      "code": "1305",
+      "category": "WETSUIT",
+      "item": "Scubapro Definition 3mm WOMEN Wetsuit Scuba Diving - Baju Selam",
+      "status": "UPDATED",
+      "price": 5197.5
+    },
+    {
+      "code": "1306",
+      "category": "WETSUIT",
+      "item": "Scubapro Definition 3mm MEN Wetsuit Scuba Diving - Baju Selam",
+      "status": "UPDATED",
+      "price": 5197.5
+    },
+    {
+      "code": "1307",
+      "category": "WETSUIT",
+      "item": "Scubapro Definition Steamer 1mm MEN Scuba Diving - Baju Selam",
+      "status": "PRICE FINAL, NOT YET UPLOADED",
+      "price": 3811.5
+    },
+    {
+      "code": "1308",
+      "category": "WETSUIT",
+      "item": "Scubapro Definition 1mm Top WOMEN Wetsuit Scuba Diving - Baju Selam",
+      "status": "UPDATED",
+      "price": 2182.95
+    },
+    {
+      "code": "1309",
+      "category": "WETSUIT",
+      "item": "Scubapro Definition 1mm Top MEN Wetsuit Scuba Diving - Baju Selam",
+      "status": "UPDATED",
+      "price": 2182.95
+    },
+    {
+      "code": "1310",
+      "category": "WETSUIT",
+      "item": "Scubapro Sport 3mm Wetsuit WOMEN Scuba Diving - Baju Selam",
+      "status": "UPDATED",
+      "price": 3291.75
+    },
+    {
+      "code": "1311",
+      "category": "WETSUIT",
+      "item": "Scubapro Sport 3mm Wetsuit MEN Scuba Diving - Baju Selam",
+      "status": "UPDATED",
+      "price": 3291.75
+    },
+    {
+      "code": "1312",
+      "category": "WETSUIT",
+      "item": "Scubapro Sport 0.5mm Wetsuit Scuba Diving - Baju Selam",
+      "status": "NO Competitor, Updated",
+      "price": 2425.5
+    },
+    {
+      "code": "1313",
+      "category": "VEST",
+      "item": "Scubapro Sport 2.0 Hoodless Vest Scuba Diving - Rompi Selam",
+      "status": "NO Competitor, Updated",
+      "price": 1351.35
+    },
+    {
+      "code": "1314",
+      "category": "WETSUIT",
+      "item": "Scubapro Oneflex 3mm MEN Wetsuit Scuba Diving - Baju Selam",
+      "status": "UPDATED",
+      "price": 3811.5
+    },
+    {
+      "code": "1315",
+      "category": "WETSUIT",
+      "item": "Scubapro Oneflex 3mm WOMEN Wetsuit Scuba Diving - Baju Selam",
+      "status": "UPDATED",
+      "price": 3811.5
+    },
+    {
+      "code": "1316",
+      "category": "WETSUIT",
+      "item": "Scubapro Oneflex 5mm MEN Wetsuit Scuba Diving - Baju Selam",
+      "status": "PRICE FINAL, NOT YET UPLOADED",
+      "price": 4677.75
+    },
+    {
+      "code": "1317",
+      "category": "WETSUIT",
+      "item": "Scubapro Oneflex Shorty 2.5mm Short Wetsuit Scuba Diving - Baju Selam",
+      "status": "NOT FOUND",
+      "price": 1728.375
+    },
+    {
+      "code": "1318",
+      "category": "WETSUIT",
+      "item": "Scubapro Everflex 1.5mm Top WOMEN Wetsuit Scuba Diving - Baju Selam",
+      "status": "UPDATED",
+      "price": 3118.5
+    },
+    {
+      "code": "1319",
+      "category": "WETSUIT",
+      "item": "Scubapro Everflex 1.5mm Top MEN Wetsuit Scuba Diving - Baju Selam",
+      "status": "UPDATED",
+      "price": 3291.75
+    },
+    {
+      "code": "1320",
+      "category": "WETSUIT",
+      "item": "Scubapro Everflex 1.5mm Short WOMEN Wetsuit Scuba Diving - Celana Selam",
+      "status": "NOT FOUND",
+      "price": 920.0
+    },
+    {
+      "code": "1321",
+      "category": "WETSUIT",
+      "item": "Scubapro Everflex 1.5mm Short MEN Wetsuit Scuba Diving - Celana Selam",
+      "status": "NOT FOUND",
+      "price": 1387.5
+    },
+    {
+      "code": "1322",
+      "category": "WETSUIT",
+      "item": "Scubapro Everflex 1.5mm Leggings WOMEN Wetsuit Scuba Diving - Celana",
+      "status": "UPDATED",
+      "price": 2858.625
+    },
+    {
+      "code": "1323",
+      "category": "WETSUIT",
+      "item": "Scubapro Everflex 1.5mm Pants MEN Wetsuit Scuba Diving - Celana Selam",
+      "status": "UPDATED",
+      "price": 2945.25
+    },
+    {
+      "code": "1324",
+      "category": "VEST",
+      "item": "Scubapro Everflex Yulex 5/3mm Hooded Vest Scuba Diving - Rompi Selam Wetsuit",
+      "status": "NOT FOUND",
+      "price": 2356.875
+    },
+    {
+      "code": "1325",
+      "category": "WETSUIT",
+      "item": "Scubapro Hybrid Thermal Top 1mm WOMEN - Baju Selam",
+      "status": "UPDATED",
+      "price": 1593.9
+    },
+    {
+      "code": "1326",
+      "category": "WETSUIT",
+      "item": "Scubapro Hybrid Thermal Top 1mm MEN - Baju Selam",
+      "status": "UPDATED",
+      "price": 1524.6
+    },
+    {
+      "code": "1327",
+      "category": "WETSUIT",
+      "item": "Scubapro Hybrid 1mm Cargo (Long) Pants - Celana Selam Wetsuit Diving",
+      "status": "OOS",
+      "price": 2230.5
+    },
+    {
+      "code": "1328",
+      "category": "WETSUIT",
+      "item": "Scubapro Hybrid 1mm Cargo (Short) Pants - Celana Selam Wetsuit Diving",
+      "status": "OOS",
+      "price": 1805.25
+    },
+    {
+      "code": "1329",
+      "category": "WETSUIT",
+      "item": "Scubapro Hybrid 1mm Cargo (Long) Pants V2 - Celana Selam Wetsuit Diving",
+      "status": "UPDATED",
+      "price": 3378.375
+    },
+    {
+      "code": "1330",
+      "category": "WETSUIT",
+      "item": "Scubapro Hybrid 1mm Cargo (Short) Pants V2 - Celana Selam Wetsuit Diving",
+      "status": "UPDATED",
+      "price": 2945.25
+    },
+    {
+      "code": "1331",
+      "category": "VEST",
+      "item": "Scubapro Hybrid Hooded Vest 1mm - Rompi Selam Scuba Diving",
+      "status": "UPDATED",
+      "price": 1091.475
+    },
+    {
+      "code": "1332",
+      "category": "WETSUIT",
+      "item": "Scubapro Everflex Yulex 3mm Long Sleeve Top Scuba Diving MEN - Atasan Selam Pria",
+      "status": "UPDATED",
+      "price": 4504.5
+    },
+    {
+      "code": "1333",
+      "category": "WETSUIT",
+      "item": "Scubapro Everflex Yulex 3mm Long Sleeve Top Scuba Diving WOMEN - Atasan Selam Wanita",
+      "status": "UPDATED",
+      "price": 4504.5
+    },
+    {
+      "code": "1334",
+      "category": "WETSUIT",
+      "item": "Scubaoro Everflex Yulex 3mm Pants Scuba Diving MEN - Celana Selam Pria",
+      "status": "UPDATED",
+      "price": 3742.2
+    },
+    {
+      "code": "1335",
+      "category": "WETSUIT",
+      "item": "Scubaoro Everflex Yulex 3mm Pants Scuba Diving WOMEN - Celana Selam Wanita",
+      "status": "UPDATED",
+      "price": 3742.2
+    },
+    {
+      "code": "1336",
+      "category": "WETSUIT",
+      "item": "Scubapro Ecco 2.5mm Wetsuit Scuba Diving UNISEX MEN - Baju Selam Pria Unisex",
+      "status": "UPDATED",
+      "price": 2385.0
+    },
+    {
+      "code": "1337",
+      "category": "HOOD",
+      "item": "Scubapro Everflex Hood 5/3mm with Face Seal - Tudung Selam Wetsuit Diving",
+      "status": "NOT FOUND",
+      "price": 0.0
+    },
+    {
+      "code": "1338",
+      "category": "HOOD",
+      "item": "Scubapro Everflex Hood 3/2mm without Face Seal - Tudung Selam Wetsuit Diving",
+      "status": "PRICE FINAL, NOT YET UPLOADED",
+      "price": 658.35
+    },
+    {
+      "code": "1339",
+      "category": "VEST",
+      "item": "Scubapro Everflex Yulex 2mm Hooded Vest Scuba Diving - Rompi Selam Wetsuit",
+      "status": "NO Competitor, Updated",
+      "price": 2252.25
+    },
+    {
+      "code": "1340",
+      "category": "RASHGUARD",
+      "item": "Scubapro UPF 80 T-Flex Women's Top Rash Guard Scuba Diving - Atasan Selam",
+      "status": "UPDATED",
+      "price": 575.0
+    },
+    {
+      "code": "1341",
+      "category": "RASHGUARD",
+      "item": "Scubapro UPF 80 T-Flex Men's Top Rash Guard Scuba Diving - Atasan Selam",
+      "status": "UPDATED",
+      "price": 575.0
+    },
+    {
+      "code": "1342",
+      "category": "RASHGUARD",
+      "item": "Scubapro UPF 80 T-Flex Women's Leggings Scuba Diving - Celana Selam",
+      "status": "UPDATED",
+      "price": 684.0
+    },
+    {
+      "code": "1343",
+      "category": "RASHGUARD",
+      "item": "Scubapro UPF 50 T-Flex Women's Top Rash Guard Scuba Diving - Atasan Selam",
+      "status": "UPDATED",
+      "price": 550.0
+    },
+    {
+      "code": "1344",
+      "category": "RASHGUARD",
+      "item": "Scubapro UPF 50 T-Flex Women's Top CORAL Rash Guard Scuba Diving - Atasan Selam",
+      "status": "NO Competitor, Updated",
+      "price": 1126.125
+    },
+    {
+      "code": "1345",
+      "category": "RASHGUARD",
+      "item": "Scubapro UPF 50 T-Flex Women's Top SHADE Rash Guard Scuba Diving - Atasan Selam",
+      "status": "NO Competitor, Updated",
+      "price": 1126.125
+    },
+    {
+      "code": "1346",
+      "category": "RASHGUARD",
+      "item": "Scubapro UPF 50 T-Flex Women's Top JELLY Rash Guard Scuba Diving - Atasan Selam",
+      "status": "NO Competitor, Updated",
+      "price": 1126.125
+    },
+    {
+      "code": "1347",
+      "category": "RASHGUARD",
+      "item": "Scubapro UPF 50 T-Flex Women's Top OCEAN Rashie SHORT SLEEVE Rash Guard Scuba Diving - Atasan Selam",
+      "status": "NO Competitor, Updated",
+      "price": 866.25
+    },
+    {
+      "code": "1348",
+      "category": "Uncategorized",
+      "item": "Scubapro UPF 50 T-Flex Women's Top CORAL Rashie SHORT SLEEVE Rash Guard Scuba Diving - Atasan Selam",
+      "status": "PRICE FINAL, NOT YET UPLOADED",
+      "price": 866.25
+    },
+    {
+      "code": "1349",
+      "category": "RASHGUARD",
+      "item": "Scubapro UPF 50 T-Flex Men's Top Rash Guard Scuba Diving - Atasan Selam",
+      "status": "UPDATED",
+      "price": 550.0
+    },
+    {
+      "code": "1350",
+      "category": "RASHGUARD",
+      "item": "Scubapro UPF 50 T-Flex Men's Top SHARK Rash Guard Scuba Diving - Atasan Selam",
+      "status": "NO Competitor, Updated",
+      "price": 1212.75
+    },
+    {
+      "code": "1351",
+      "category": "RASHGUARD",
+      "item": "Scubapro UPF 50 T-Flex Men's Top WAVE Rash Guard Scuba Diving - Atasan Selam",
+      "status": "NO Competitor, Updated",
+      "price": 1212.75
+    },
+    {
+      "code": "1352",
+      "category": "RASHGUARD",
+      "item": "Scubapro UPF 50 T-Flex Men's Top NAVY BLUE SHORT SLEEVE Rash Guard Scuba Diving - Atasan Selam",
+      "status": "NO Competitor, Updated",
+      "price": 866.25
+    },
+    {
+      "code": "1353",
+      "category": "RASHGUARD",
+      "item": "Scubapro UPF Swim Chlorine Resistant Rash Guard Scuba Diving - Atasan Selam",
+      "status": "UPDATED",
+      "price": 750.0
+    },
+    {
+      "code": "1401",
+      "category": "BOOTIES",
+      "item": "Scubapro Delta 5 Booties Scuba Diving - Sepatu Selam",
+      "status": "UPDATED",
+      "price": 1039.5
+    },
+    {
+      "code": "1402",
+      "category": "BOOTIES",
+      "item": "Scubapro Delta 3 Short Booties Scuba Diving - Sepatu Selam",
+      "status": "UPDATED",
+      "price": 623.7
+    },
+    {
+      "code": "1403",
+      "category": "BOOTIES",
+      "item": "Scubapro Hybrid Sock 2.5mm Booties Scuba Diving - Sepatu Selam",
+      "status": "UPDATED",
+      "price": 606.375
+    },
+    {
+      "code": "1404",
+      "category": "BOOTIES",
+      "item": "Scubapro Base 4 Booties Scuba Diving - Sepatu Selam",
+      "status": "UPDATED",
+      "price": 796.95
+    },
+    {
+      "code": "1405",
+      "category": "BOOTIES",
+      "item": "Scubapro GO Sock 3mm Booties Scuba Diving - Sepatu Selam",
+      "status": "UPDATED",
+      "price": 589.05
+    },
+    {
+      "code": "1406",
+      "category": "FINS",
+      "item": "Scubapro Seawing Supernova Fins Scuba Diving - Kaki Katak Selam",
+      "status": "UPDATED",
+      "price": 3551.625
+    },
+    {
+      "code": "1407",
+      "category": "FINS",
+      "item": "Scubapro Seawing Supernova Additional Closed Heel Footpocket ONLY Scuba Diving - Kaki Katak Selam",
+      "status": "UPDATED",
+      "price": 935.55
+    },
+    {
+      "code": "1408",
+      "category": "FINS",
+      "item": "Scubapro Seawing Supernova Additional Blade ONLY Fins Scuba Diving - Kaki Katak Selam",
+      "status": "UPDATED",
+      "price": 2165.625
+    },
+    {
+      "code": "1409",
+      "category": "FINS",
+      "item": "Scubapro S-TEK Fin Fins Scuba Diving - Kaki Katak Selam",
+      "status": "UPDATED",
+      "price": 3551.625
+    },
+    {
+      "code": "1410",
+      "category": "FINS",
+      "item": "Scubapro Seawing Nova Fins Scuba Diving - Kaki Katak Selam",
+      "status": "UPDATED",
+      "price": 3205.125
+    },
+    {
+      "code": "1411",
+      "category": "FINS",
+      "item": "Scubapro Seawing Nova Gorilla Fins Scuba Diving - Kaki Katak Selam",
+      "status": "UPDATED",
+      "price": 3378.375
+    },
+    {
+      "code": "1412",
+      "category": "FINS",
+      "item": "Scubapro Go Sport Open Heels Fins - Kaki Katak Selam",
+      "status": "UPDATED",
+      "price": 1784.475
+    },
+    {
+      "code": "1413",
+      "category": "FINS",
+      "item": "Scubapro Go Sport Gorilla Open Heels Fins - Kaki Katak Selam",
+      "status": "UPDATED",
+      "price": 2252.25
+    },
+    {
+      "code": "1414",
+      "category": "FINS",
+      "item": "Scubapro Go Travel Fins - Barefoot, Boots is not needed - Kaki Katak Selam",
+      "status": "UPDATED",
+      "price": 1351.35
+    },
+    {
+      "code": "1416",
+      "category": "FINS",
+      "item": "Scubapro Jet Fins Camo Scuba Diving - Kaki Katak Selam",
+      "status": "UPDATED",
+      "price": 3465.0
+    },
+    {
+      "code": "1417",
+      "category": "FINS",
+      "item": "Scubapro Jet Fin Revo Fins Scuba Diving - Kaki Katak Selam",
+      "status": "UPDATED",
+      "price": 1800.0
+    },
+    {
+      "code": "1418",
+      "category": "FINS",
+      "item": "Scubapro Jet Sport Adjustable Fins Scuba Diving - Kaki Katak Selam",
+      "status": "UPDATED",
+      "price": 719.0
+    },
+    {
+      "code": "1501",
+      "category": "MASK",
+      "item": "Scubapro D-Mask Scuba Diving - Masker Selam",
+      "status": "NO Competitor, Updated",
+      "price": 2598.75
+    },
+    {
+      "code": "1502",
+      "category": "MASK",
+      "item": "Scubapro D-Mask Color Kit Scuba Diving - Masker Selam",
+      "status": "NO Competitor, Updated",
+      "price": 155.925
+    },
+    {
+      "code": "1503",
+      "category": "MASK",
+      "item": "Scubapro D-Mask + Color Kit Scuba Diving - Masker Selam",
+      "status": "NO Competitor, Updated",
+      "price": 2754.675
+    },
+    {
+      "code": "1504",
+      "category": "MASK",
+      "item": "Scubapro Synergy 2 Trufit Mask Scuba Diving - Masker Selam",
+      "status": "UPDATED",
+      "price": 1689.188
+    },
+    {
+      "code": "1505",
+      "category": "MASK",
+      "item": "Scubapro Synergy 2 Trufit Mask Scuba Diving - Mirror Lens - Masker Selam",
+      "status": "UPDATED",
+      "price": 1949.063
+    },
+    {
+      "code": "1506",
+      "category": "MASK",
+      "item": "Scubapro Synergy Twin Trufit Mask Scuba Diving - Masker Selam",
+      "status": "UPDATED",
+      "price": 1689.188
+    },
+    {
+      "code": "1507",
+      "category": "MASK",
+      "item": "Scubapro Synergy Twin Trufit Mask Scuba Diving - Mirror Lens - Masker Selam",
+      "status": "UPDATED",
+      "price": 1949.063
+    },
+    {
+      "code": "1508",
+      "category": "MASK",
+      "item": "Scubapro Zoom Dual Lens Mask Scuba Diving - Masker Selam",
+      "status": "UPDATED",
+      "price": 996.188
+    },
+    {
+      "code": "1509",
+      "category": "MASK",
+      "item": "Scubapro Zoom Lite Dual Lens Mask Scuba Diving - Colored - Masker Selam",
+      "status": "NO Competitor, Updated",
+      "price": 1126.125
+    },
+    {
+      "code": "1510",
+      "category": "MASK",
+      "item": "Scubapro Zoom Rental Mask Scuba Diving - Masker Selam",
+      "status": "NO Competitor, Updated",
+      "price": 822.938
+    },
+    {
+      "code": "1511",
+      "category": "ACC",
+      "item": "Scubapro Optical Lens for D-Mask Lensa Minus atau Plus - Lensa Masker",
+      "status": "OOS",
+      "price": 471.375
+    },
+    {
+      "code": "1512",
+      "category": "ACC",
+      "item": "Scubapro Optical Lens for Zoom Mask Lensa Minus atau Plus - Lensa Masker",
+      "status": "OOS",
+      "price": 439.95
+    },
+    {
+      "code": "1513",
+      "category": "ACC",
+      "item": "Scubapro Optical Lens for Zoom & Flux Twin Mask Lensa Minus atau Plus - Lensa Masker",
+      "status": "UPDATED",
+      "price": 779.625
+    },
+    {
+      "code": "1514",
+      "category": "ACC",
+      "item": "NO BRAND Optical Lens Optical Lens for Scubapro Zoom & Flux Twin Mask Lensa Minus atau Plus - Lensa Masker",
+      "status": "UPDATED",
+      "price": 465.0
+    },
+    {
+      "code": "1515",
+      "category": "MASK",
+      "item": "Scubapro Spectra Dual Lens Mask Scuba Diving - Masker Selam",
+      "status": "UPDATED",
+      "price": 1082.813
+    },
+    {
+      "code": "1516",
+      "category": "MASK",
+      "item": "Scubapro Spectra Dual Lens Mask Scuba Diving - Mirror Lens - Masker Selam",
+      "status": "UPDATED",
+      "price": 1299.375
+    },
+    {
+      "code": "1517",
+      "category": "MASK",
+      "item": "Scubapro Flux Twin Dual Lens Mask Scuba Diving - Masker Selam",
+      "status": "UPDATED",
+      "price": 1537.594
+    },
+    {
+      "code": "1518",
+      "category": "MASK",
+      "item": "Scubapro Steel Comp Dual Lens Mask Scuba Diving - Masker Selam",
+      "status": "UPDATED",
+      "price": 1104.469
+    },
+    {
+      "code": "1519",
+      "category": "MASK",
+      "item": "Scubapro Steel Comp New Colour Dual Lens Mask Scuba Diving - Masker Selam",
+      "status": "UPDATED",
+      "price": 1104.469
+    },
+    {
+      "code": "1520",
+      "category": "MASK",
+      "item": "Scubapro Crystal Vu Single Lens Mask Scuba Diving - Masker Selam",
+      "status": "UPDATED",
+      "price": 1472.625
+    },
+    {
+      "code": "1521",
+      "category": "MASK",
+      "item": "Scubapro Frameless Single Lens Mask Scuba Diving - Masker Selam",
+      "status": "UPDATED",
+      "price": 1299.375
+    },
+    {
+      "code": "1522",
+      "category": "MASK",
+      "item": "Scubapro Solo Single Lens Mask Scuba Diving - Masker Selam",
+      "status": "UPDATED",
+      "price": 1169.438
+    },
+    {
+      "code": "1523",
+      "category": "MASK",
+      "item": "Scubapro Steel Pro Single Lens Mask Scuba Diving - Masker Selam",
+      "status": "UPDATED",
+      "price": 1104.469
+    },
+    {
+      "code": "1524",
+      "category": "MASK",
+      "item": "Scubapro Steel Pro New Colour Single Lens Mask Scuba Diving - Masker Selam",
+      "status": "UPDATED",
+      "price": 1104.469
+    },
+    {
+      "code": "1525",
+      "category": "MASK",
+      "item": "Scubapro Ghost Single Lens Low Volume Mask Scuba Diving - Masker Selam",
+      "status": "UPDATED",
+      "price": 931.219
+    },
+    {
+      "code": "1526",
+      "category": "MASK",
+      "item": "Scubapro Velcro & Neoprene Mask Strap Cover - Penutup Tali Masker Selam",
+      "status": "UPDATED",
+      "price": 207.9
+    },
+    {
+      "code": "1527",
+      "category": "MASK",
+      "item": "Scubapro Comfort Strap - Tali Masker Selam",
+      "status": "UPDATED",
+      "price": 398.475
+    },
+    {
+      "code": "1528",
+      "category": "MASK",
+      "item": "Scubapro Trinidad 3 Mask Diving - Masker Selam",
+      "status": "UPDATED",
+      "price": 757.969
+    },
+    {
+      "code": "1529",
+      "category": "SNORKEL",
+      "item": "Scubapro Trinidad Snorkel Diving - Aksesoris Selam",
+      "status": "UPDATED",
+      "price": 389.813
+    },
+    {
+      "code": "1530",
+      "category": "SNORKEL SET",
+      "item": "Scubapro Trinidad Mask and Snorkel Set Combo Diving - Paket Snorkel Kacamata Selam",
+      "status": "UPDATED",
+      "price": 1147.781
+    },
+    {
+      "code": "1531",
+      "category": "SNORKEL",
+      "item": "Scubapro Spectra Dry Snorkel Scuba Diving - Snorkel Selam",
+      "status": "UPDATED",
+      "price": 714.656
+    },
+    {
+      "code": "1532",
+      "category": "SNORKEL",
+      "item": "Scubapro Spectra Semi-Dry Snorkel Scuba Diving - Snorkel Selam",
+      "status": "UPDATED",
+      "price": 498.094
+    },
+    {
+      "code": "1533",
+      "category": "SNORKEL SET",
+      "item": "Scubapro Ecco Mask and Snorkel Set Combo - Paket Snorkel Kacamata Selam",
+      "status": "UPDATED",
+      "price": 485.1
+    },
+    {
+      "code": "1534",
+      "category": "SNORKEL SET",
+      "item": "Scubapro Spider Kids Mask and Snorkel Set Combo - Paket Snorkel Kacamata Selam",
+      "status": "UPDATED",
+      "price": 675.675
+    },
+    {
+      "code": "1535",
+      "category": "SNORKEL",
+      "item": "Scubapro Apnea Snorkel Scuba Diving - Aksesoris Selam",
+      "status": "UPDATED",
+      "price": 303.188
+    },
+    {
+      "code": "1601",
+      "category": "BAG",
+      "item": "Scubapro Dive N Roll Light Dive Bag Scuba Diving - Tas Selam",
+      "status": "UPDATED",
+      "price": 4504.5
+    },
+    {
+      "code": "1602",
+      "category": "BAG",
+      "item": "Scubapro Caravan Dive Bag Scuba Diving - Tas Selam",
+      "status": "ON CHECK",
+      "price": 3456.75
+    },
+    {
+      "code": "1603",
+      "category": "BAG",
+      "item": "Scubapro Mesh Dive Bag Scuba Diving - Tas Selam",
+      "status": "OOS",
+      "price": 0.0
+    },
+    {
+      "code": "1604",
+      "category": "BAG",
+      "item": "Scubapro Mesh Sack Dive Bag Scuba Diving - Tas Selam",
+      "status": "OOS",
+      "price": 0.0
+    },
+    {
+      "code": "1605",
+      "category": "BAG",
+      "item": "Scubapro Travel Regulator Bag Scuba Diving - Tas Selam",
+      "status": "OOS",
+      "price": 727.5
+    },
+    {
+      "code": "1606",
+      "category": "BAG",
+      "item": "Scubapro Definition Weight 7 Bag Scuba Diving - Tas Selam",
+      "status": "UPDATED",
+      "price": 554.4
+    },
+    {
+      "code": "1607",
+      "category": "BAG",
+      "item": "Scubapro Definition Reg 10L Bag Scuba Diving - Tas Regulator",
+      "status": "UPDATED",
+      "price": 1126.125
+    },
+    {
+      "code": "1608",
+      "category": "BAG",
+      "item": "Scubapro Definition Pack 24L Bag Scuba Diving - Tas Selam",
+      "status": "UPDATED",
+      "price": 1437.975
+    },
+    {
+      "code": "1609",
+      "category": "BAG",
+      "item": "Scubapro Definition Roll 130 Bag Scuba Diving - Tas Selam",
+      "status": "UPDATED",
+      "price": 5717.25
+    },
+    {
+      "code": "1610",
+      "category": "BAG",
+      "item": "Scubapro Sport Bag 9 Scuba Diving - Tas",
+      "status": "UPDATED",
+      "price": 450.45
+    },
+    {
+      "code": "1611",
+      "category": "BAG",
+      "item": "Scubapro Sport Bag 10 Scuba Diving - Tas",
+      "status": "UPDATED",
+      "price": 1212.75
+    },
+    {
+      "code": "1612",
+      "category": "BAG",
+      "item": "Scubapro Sport Mesh 65 Bag Scuba Diving - Tas Selam",
+      "status": "UPDATED",
+      "price": 1126.125
+    },
+    {
+      "code": "1613",
+      "category": "BAG",
+      "item": "Scubapro Sport Mesh 95 Bag Scuba Diving - Tas Selam",
+      "status": "UPDATED",
+      "price": 1351.35
+    },
+    {
+      "code": "1614",
+      "category": "BAG",
+      "item": "Scubapro Sport 105 Bag Scuba Diving - Tas Selam",
+      "status": "UPDATED",
+      "price": 3811.5
+    },
+    {
+      "code": "1615",
+      "category": "BAG",
+      "item": "Scubapro Sport Mesh N Roll 100 Bag Scuba Diving - Tas Selam",
+      "status": "NO Competitor, Updated",
+      "price": 2252.25
+    },
+    {
+      "code": "1616",
+      "category": "BAG",
+      "item": "Scubapro Sport Bag 125 Scuba Diving - Tas Selam",
+      "status": "UPDATED",
+      "price": 3291.75
+    },
+    {
+      "code": "1617",
+      "category": "BAG",
+      "item": "Scubapro Heavy Duty Duffle Bag Scuba Diving - Tas Selam",
+      "status": "NO Competitor, Updated",
+      "price": 1386.0
+    },
+    {
+      "code": "1618",
+      "category": "BAG",
+      "item": "Scubapro Ocean Clean Up Bag Scuba Diving - Tas Selam",
+      "status": "NO Competitor, Updated",
+      "price": 294.525
+    },
+    {
+      "code": "1701",
+      "category": "KNIFE",
+      "item": "Scubapro Jawz Ti Knife Scuba Diving - Pisau Selam",
+      "status": "OOS",
+      "price": 4132.013
+    },
+    {
+      "code": "1702",
+      "category": "KNIFE",
+      "item": "Scubapro Jawz Ti Military Knife Scuba Diving - Pisau Selam",
+      "status": "OOS",
+      "price": 4391.888
+    },
+    {
+      "code": "1703",
+      "category": "KNIFE",
+      "item": "Scubapro White Tip Knife Scuba Diving - Pisau Selam",
+      "status": "UPDATED",
+      "price": 1091.475
+    },
+    {
+      "code": "1704",
+      "category": "KNIFE",
+      "item": "Scubapro Mesh Cutter Knife Scuba Diving - Pisau Selam",
+      "status": "OOS",
+      "price": 852.0
+    },
+    {
+      "code": "1705",
+      "category": "KNIFE",
+      "item": "Scubapro TK15 Knife Scuba Diving - Pisau Selam",
+      "status": "NO Competitor, Updated",
+      "price": 3638.25
+    },
+    {
+      "code": "1706",
+      "category": "KNIFE",
+      "item": "Scubapro K6 Knife Scuba Diving - Pisau Selam",
+      "status": "OOS",
+      "price": 2130.975
+    },
+    {
+      "code": "1707",
+      "category": "KNIFE",
+      "item": "Scubapro Mako Stainless Knife Scuba Diving - Pisau Selam",
+      "status": "UPDATED",
+      "price": 1212.75
+    },
+    {
+      "code": "1708",
+      "category": "KNIFE",
+      "item": "Scubapro Mako Titanium Knife Scuba Diving - Pisau Selam",
+      "status": "UPDATED",
+      "price": 2182.95
+    },
+    {
+      "code": "1801",
+      "category": "GLOVES",
+      "item": "Scubapro D-Flex 2mm Gloves Scuba Diving - Sarung Tangan Selam",
+      "status": "UPDATED",
+      "price": 693.0
+    },
+    {
+      "code": "1802",
+      "category": "GLOVES",
+      "item": "Scubapro Seamless 1.5mm Gloves Scuba Diving - Sarung Tangan Selam",
+      "status": "OOS",
+      "price": 785.625
+    },
+    {
+      "code": "1803",
+      "category": "GLOVES",
+      "item": "Scubapro Tropic 1.5mm Gloves Scuba Diving - Black - Sarung Tangan Selam",
+      "status": "UPDATED",
+      "price": 727.65
+    },
+    {
+      "code": "1804",
+      "category": "GLOVES",
+      "item": "Scubapro Tropic 1.5mm Gloves Scuba Diving - Colored - Sarung Tangan Selam",
+      "status": "UPDATED",
+      "price": 796.95
+    },
+    {
+      "code": "1901",
+      "category": "DIVECOMP",
+      "item": "Scubapro G3 (Galileo 3) Dive Computer Diving - Komputer Selam",
+      "status": "NO Competitor, Updated",
+      "price": 11174.625
+    },
+    {
+      "code": "1902",
+      "category": "DIVECOMP",
+      "item": "Scubapro G2 Wrist (Galileo 2) Dive Computer Diving - Komputer Selam",
+      "status": "NO Competitor, Updated",
+      "price": 12863.813
+    },
+    {
+      "code": "1903",
+      "category": "DIVECOMP",
+      "item": "Scubapro G2 Tek Dive Computer Diving - Komputer Selam",
+      "status": "NO Competitor, Updated",
+      "price": 12863.813
+    },
+    {
+      "code": "1904",
+      "category": "DIVECOMP",
+      "item": "Scubapro Luna 2.0 Dive Computer Diving - Komputer Selam",
+      "status": "NO Competitor, Updated",
+      "price": 5458.059
+    },
+    {
+      "code": "1905",
+      "category": "DIVECOMP",
+      "item": "Scubapro Z1 Dive Computer Diving - Komputer Selam",
+      "status": "UPDATED",
+      "price": 5200.0
+    },
+    {
+      "code": "1906",
+      "category": "DIVECOMP",
+      "item": "Scubapro A1 Aladin Dive Computer Diving - Komputer Selam",
+      "status": "NO Competitor, Updated",
+      "price": 5803.789
+    },
+    {
+      "code": "1907",
+      "category": "DIVECOMP",
+      "item": "Scubapro A2 Aladin Dive Computer Diving - Komputer Selam",
+      "status": "NO Competitor, Updated",
+      "price": 6886.688
+    },
+    {
+      "code": "1908",
+      "category": "DIVECOMP",
+      "item": "Scubapro Aladin One Matrix Dive Computer Diving - Aksesoris Selam",
+      "status": "NO Competitor, Updated",
+      "price": 4028.063
+    },
+    {
+      "code": "1909",
+      "category": "DIVECOMP",
+      "item": "Scubapro Aladin Sport Matrix Dive Computer Diving - Aksesoris Selam",
+      "status": "NO Competitor, Updated",
+      "price": 4287.938
+    },
+    {
+      "code": "1910",
+      "category": "DIVELAMP",
+      "item": "Scubapro Nova 1000R Scuba Diving Light Torch - Senter Selam",
+      "status": "NO Competitor, Updated",
+      "price": 3291.75
+    },
+    {
+      "code": "1911",
+      "category": "DIVELAMP",
+      "item": "Scubapro Nova 850 TEC Scuba Diving Light Torch - Senter Selam",
+      "status": "UPDATED",
+      "price": 2858.625
+    },
+    {
+      "code": "1912",
+      "category": "DIVELAMP",
+      "item": "Scubapro Nova 250 Scuba Diving Light Torch - Senter Selam",
+      "status": "UPDATED",
+      "price": 1489.95
+    },
+    {
+      "code": "2000",
+      "category": "ACC",
+      "item": "Fourth Element Thermocline Fin Socks Scuba Diving - Kaos Kaki Selam",
+      "status": "OOS",
+      "price": 796.0
+    },
+    {
+      "code": "2000",
+      "category": "ACC",
+      "item": "Fourth Element Recycled Mask Strap Scuba Diving - Tali Masker Selam",
+      "status": "OOS",
+      "price": 516.0
+    },
+    {
+      "code": "2000",
+      "category": "ACC",
+      "item": "Mask Case include for ALL Mask",
+      "status": "OOS",
+      "price": 0.0
+    },
+    {
+      "code": "2000",
+      "category": "ACC",
+      "item": "Fourth Element Changing Mat Scuba Diving - Alas Alat Selam",
+      "status": "OOS",
+      "price": 528.0
+    },
+    {
+      "code": "2000",
+      "category": "ACC",
+      "item": "Fourth Element Bucket Hat - Topi",
+      "status": "OOS",
+      "price": 664.0
+    },
+    {
+      "code": "2000",
+      "category": "ACC",
+      "item": "Fourth Element Gulper 500ml Bottle - Botol Minum",
+      "status": "OOS",
+      "price": 600.0
+    },
+    {
+      "code": "2000",
+      "category": "ACC",
+      "item": "Fourth Element Gulper 900ml Bottle - Botol Minum",
+      "status": "OOS",
+      "price": 720.0
+    },
+    {
+      "code": "2000",
+      "category": "ACC",
+      "item": "Halcyon Towel",
+      "status": "OOS",
+      "price": 0.0
+    },
+    {
+      "code": "2000",
+      "category": "ACC",
+      "item": "Halcyon Diver's Alert 1m SMB Scuba Diving - Aksesoris Selam Surface Marker Buoy",
+      "status": "OOS",
+      "price": 0.0
+    },
+    {
+      "code": "2000",
+      "category": "ACC",
+      "item": "NobeL Outdoor Tag Keychain Scuba Diving - Aksesoris Selam",
+      "status": "OOS",
+      "price": 28.0
+    },
+    {
+      "code": "2000",
+      "category": "BAG",
+      "item": "Fourth Element Expedition Series Duffle Bag Scuba Diving - Tas Alat Selam",
+      "status": "OOS",
+      "price": 2040.0
+    },
+    {
+      "code": "2000",
+      "category": "BAG",
+      "item": "Fourth Element Argo Drybag Scuba Diving - Tas Alat Selam",
+      "status": "OOS",
+      "price": 1760.0
+    },
+    {
+      "code": "2000",
+      "category": "BAG",
+      "item": "Halcyon Gear Bag Scuba Diving - Tas Alat Selam",
+      "status": "OOS",
+      "price": 0.0
+    },
+    {
+      "code": "2000",
+      "category": "BAG",
+      "item": "NobeL Outdoor Manta 100 Mesh Bag Scuba Diving - Tas Selam",
+      "status": "OOS",
+      "price": 280.0
+    },
+    {
+      "code": "2000",
+      "category": "BAG",
+      "item": "NobeL Outdoor Cakalang 38 Long Fins Bag Freediving - Tas Selam",
+      "status": "OOS",
+      "price": 268.0
+    },
+    {
+      "code": "2000",
+      "category": "BAG",
+      "item": "NobeL Outdoor Nobi Bag - Tas Selam",
+      "status": "OOS",
+      "price": 28.0
+    },
+    {
+      "code": "2000",
+      "category": "BAG",
+      "item": "NobeL Outdoor Merfin Bag Fins Mermaid - Tas Selam Putri Duyung",
+      "status": "OOS",
+      "price": 388.0
+    },
+    {
+      "code": "2000",
+      "category": "BCD",
+      "item": "Halcyon BCD 20th Anniv Eclipse System 30lb Carbon Fiber - Alat Selam",
+      "status": "OOS",
+      "price": 0.0
+    },
+    {
+      "code": "2000",
+      "category": "BCD",
+      "item": "Halcyon BCD Custom (Made by Order) Scuba Diving - Alat Selam",
+      "status": "OOS",
+      "price": 0.0
+    },
+    {
+      "code": "2000",
+      "category": "BOOTIES",
+      "item": "Fourth Element Amphibian Boots Scuba Diving - Booties Selam",
+      "status": "OOS",
+      "price": 1800.0
+    },
+    {
+      "code": "2000",
+      "category": "BOOTIES",
+      "item": "Fourth Element Pelagic Boots Scuba Diving - Booties Selam",
+      "status": "OOS",
+      "price": 1560.0
+    },
+    {
+      "code": "2000",
+      "category": "BOOTIES",
+      "item": "Fourth Element Rock Hopper 3mm Boots Scuba Diving - Booties Selam",
+      "status": "OOS",
+      "price": 916.0
+    },
+    {
+      "code": "2000",
+      "category": "CLOTHES",
+      "item": "Fourth Element Storm Poncho All Weather - Ponco Jaket",
+      "status": "OOS",
+      "price": 3600.0
+    },
+    {
+      "code": "2000",
+      "category": "CLOTHES",
+      "item": "Fourth Element Windbreaker Smock Jacket - Jaket",
+      "status": "OOS",
+      "price": 2800.0
+    },
+    {
+      "code": "2000",
+      "category": "CLOTHES",
+      "item": "Fourth Element Maluku Bikini Set Multi - Baju Renang",
+      "status": "OOS",
+      "price": 0.0
+    },
+    {
+      "code": "2000",
+      "category": "CLOTHES",
+      "item": "Fourth Element Ocean Positive Maluku Bikini Set Black - Baju Renang",
+      "status": "OOS",
+      "price": 0.0
+    },
+    {
+      "code": "2000",
+      "category": "CLOTHES",
+      "item": "Fourth Element Ocean Positive Tiga Triangle Set Purple/Pink - Baju Renang",
+      "status": "OOS",
+      "price": 0.0
+    },
+    {
+      "code": "2000",
+      "category": "DRYSUIT",
+      "item": "Santi E. Motion Ladies First Drysuit Scuba Diving - Baju Selam",
+      "status": "OOS",
+      "price": 0.0
+    },
+    {
+      "code": "2000",
+      "category": "FINS",
+      "item": "OMS SlipStream Tech Fins Scuba Diving - Kaki Katak Selam",
+      "status": "OOS",
+      "price": 0.0
+    },
+    {
+      "code": "2000",
+      "category": "GLOVES",
+      "item": "Fourth Element 3mm Neoprene Gloves Scuba Diving - Sarung Tangan Selam",
+      "status": "OOS",
+      "price": 880.0
+    },
+    {
+      "code": "2000",
+      "category": "GLOVES",
+      "item": "Fourth Element Xerotherm Gloves Scuba Diving - Sarung Tangan Selam",
+      "status": "OOS",
+      "price": 0.0
+    },
+    {
+      "code": "2000",
+      "category": "HOOD",
+      "item": "Fourth Element 3mm Hood Scuba Diving - Tudung Selam",
+      "status": "OOS",
+      "price": 920.0
+    },
+    {
+      "code": "2000",
+      "category": "MASK",
+      "item": "Fourth Element Seeker Mask Scuba Diving - Masker Selam",
+      "status": "OOS",
+      "price": 2400.0
+    },
+    {
+      "code": "2000",
+      "category": "MASK",
+      "item": "Fourth Element Scout Mask Scuba Diving - Masker Selam",
+      "status": "OOS",
+      "price": 1960.0
+    },
+    {
+      "code": "2000",
+      "category": "MASK",
+      "item": "Fourth Element Aquanaut Mask Scuba Diving - Masker Selam",
+      "status": "OOS",
+      "price": 1480.0
+    },
+    {
+      "code": "2000",
+      "category": "MASK",
+      "item": "Fourth Element Navigator Mask Scuba Diving - Masker Selam",
+      "status": "OOS",
+      "price": 1760.0
+    },
+    {
+      "code": "2000",
+      "category": "MASK",
+      "item": "Gull Vader Mask Scuba Diving - Masker Selam",
+      "status": "OOS",
+      "price": 0.0
+    },
+    {
+      "code": "2000",
+      "category": "MASK",
+      "item": "Gull Vader Fanette Mask Scuba Diving - Masker Selam",
+      "status": "OOS",
+      "price": 0.0
+    },
+    {
+      "code": "2000",
+      "category": "MASK",
+      "item": "Gull Coco Mask Scuba Diving - Masker Selam",
+      "status": "OOS",
+      "price": 0.0
+    },
+    {
+      "code": "2000",
+      "category": "SNORKEL",
+      "item": "Fourth Element Snorkel Float Scuba Diving - Alat Selam",
+      "status": "OOS",
+      "price": 600.0
+    },
+    {
+      "code": "2000",
+      "category": "SNORKEL",
+      "item": "Fourth Element Snorkel Dry Scuba Diving - Alat Selam",
+      "status": "OOS",
+      "price": 680.0
+    },
+    {
+      "code": "2000",
+      "category": "WETSUIT",
+      "item": "Fourth Element Sipadan 1 Jacket MEN Wetsuit Scuba Diving - Atasan Selam",
+      "status": "OOS",
+      "price": 3680.0
+    },
+    {
+      "code": "2000",
+      "category": "WETSUIT",
+      "item": "Fourth Element Sipadan 1 Jacket WOMEN Wetsuit Scuba Diving - Atasan Selam",
+      "status": "OOS",
+      "price": 3680.0
+    },
+    {
+      "code": "2000",
+      "category": "WETSUIT",
+      "item": "Fourth Element Sipadan 1 Leggings MEN Wetsuit Scuba Diving - Celana Selam",
+      "status": "OOS",
+      "price": 2920.0
+    },
+    {
+      "code": "2000",
+      "category": "WETSUIT",
+      "item": "Fourth Element Sipadan 1 Leggings WOMEN Wetsuit Scuba Diving - Celana Selam",
+      "status": "OOS",
+      "price": 2920.0
+    },
+    {
+      "code": "2000",
+      "category": "WETSUIT",
+      "item": "Fourth Element Sipadan 2 Jacket MEN Wetsuit Scuba Diving - Atasan Selam",
+      "status": "OOS",
+      "price": 3680.0
+    },
+    {
+      "code": "2000",
+      "category": "WETSUIT",
+      "item": "Fourth Element Sipadan 2 Jacket WOMEN Wetsuit Scuba Diving - Atasan Selam",
+      "status": "OOS",
+      "price": 3680.0
+    },
+    {
+      "code": "2000",
+      "category": "WETSUIT",
+      "item": "Fourth Element Sipadan 2 Leggings MEN Wetsuit Scuba Diving - Celana Selam",
+      "status": "OOS",
+      "price": 2920.0
+    },
+    {
+      "code": "2000",
+      "category": "WETSUIT",
+      "item": "Fourth Element Sipadan 2 Leggings WOMEN Wetsuit Scuba Diving - Celana Selam",
+      "status": "OOS",
+      "price": 2920.0
+    },
+    {
+      "code": "2000",
+      "category": "WETSUIT",
+      "item": "Fourth Element Sipadan 3 Jacket MEN Wetsuit Scuba Diving - Atasan Selam",
+      "status": "OOS",
+      "price": 4000.0
+    },
+    {
+      "code": "2000",
+      "category": "WETSUIT",
+      "item": "Fourth Element Sipadan 3 Jacket WOMEN Wetsuit Scuba Diving - Atasan Selam",
+      "status": "OOS",
+      "price": 4000.0
+    },
+    {
+      "code": "2000",
+      "category": "WETSUIT",
+      "item": "Fourth Element Sipadan 3 Leggings MEN Wetsuit Scuba Diving - Celana Selam",
+      "status": "OOS",
+      "price": 3200.0
+    },
+    {
+      "code": "2000",
+      "category": "WETSUIT",
+      "item": "Fourth Element Sipadan 3 Leggings WOMEN Wetsuit Scuba Diving - Celana Selam",
+      "status": "OOS",
+      "price": 3200.0
+    },
+    {
+      "code": "2000",
+      "category": "WETSUIT",
+      "item": "Fourth Element Proteus II 5mm MEN Wetsuit Scuba Diving - Baju Selam",
+      "status": "OOS",
+      "price": 8400.0
+    },
+    {
+      "code": "2000",
+      "category": "WETSUIT",
+      "item": "Fourth Element Proteus II 5mm WOMEN Wetsuit Scuba Diving - Baju Selam",
+      "status": "OOS",
+      "price": 8400.0
+    },
+    {
+      "code": "2000",
+      "category": "WETSUIT",
+      "item": "Fourth Element Proteus II 3mm MEN Wetsuit Scuba Diving - Baju Selam",
+      "status": "OOS",
+      "price": 6800.0
+    },
+    {
+      "code": "2000",
+      "category": "WETSUIT",
+      "item": "Fourth Element Proteus II 3mm WOMEN Wetsuit Scuba Diving - Baju Selam",
+      "status": "OOS",
+      "price": 6800.0
+    },
+    {
+      "code": "2000",
+      "category": "WETSUIT",
+      "item": "Fourth Element Xenos 3mm WOMEN Wetsuit Scuba Diving - Baju Selam",
+      "status": "OOS",
+      "price": 6160.0
+    },
+    {
+      "code": "2000",
+      "category": "WETSUIT",
+      "item": "Fourth Element Thermocline Jacket MEN Wetsuit Scuba Diving - Jaket Selam",
+      "status": "OOS",
+      "price": 3760.0
+    },
+    {
+      "code": "2000",
+      "category": "WETSUIT",
+      "item": "Fourth Element Thermocline Jacket WOMEN Wetsuit Scuba Diving - Jaket Selam",
+      "status": "OOS",
+      "price": 3760.0
+    },
+    {
+      "code": "2000",
+      "category": "WETSUIT",
+      "item": "Fourth Element Thermocline Vest WOMEN Wetsuit Scuba Diving - Baju Selam",
+      "status": "OOS",
+      "price": 2120.0
+    },
+    {
+      "code": "2000",
+      "category": "WETSUIT",
+      "item": "Fourth Element Thermocline Hooded Vest WOMEN Wetsuit Scuba Diving - Baju Selam",
+      "status": "OOS",
+      "price": 2160.0
+    },
+    {
+      "code": "2000",
+      "category": "WETSUIT",
+      "item": "Fourth Element Thermocline Long Swimsuit WOMEN Wetsuit Scuba Diving - Baju Selam",
+      "status": "OOS",
+      "price": 3920.0
+    },
+    {
+      "code": "2000",
+      "category": "WETSUIT",
+      "item": "Fourth Element Thermocline Leggings MEN Wetsuit Scuba Diving - Celana Selam",
+      "status": "OOS",
+      "price": 2960.0
+    },
+    {
+      "code": "2000",
+      "category": "WETSUIT",
+      "item": "Fourth Element Thermocline Leggings WOMEN Wetsuit Scuba Diving - Celana Selam",
+      "status": "OOS",
+      "price": 2960.0
+    },
+    {
+      "code": "2000",
+      "category": "WETSUIT",
+      "item": "Fourth Element Thermocline Shorts WOMEN Wetsuit Scuba Diving - Celana Selam",
+      "status": "OOS",
+      "price": 1960.0
+    },
+    {
+      "code": "2000",
+      "category": "WETSUIT",
+      "item": "Fourth Element Inner drysuit",
+      "status": "OOS",
+      "price": 0.0
+    },
+    {
+      "code": "2000",
+      "category": "WETSUIT",
+      "item": "Fourth Element Hydroskin Long Sleveed Top WOMEN - Atasan Selam",
+      "status": "OOS",
+      "price": 960.0
+    }
+  ]
+}

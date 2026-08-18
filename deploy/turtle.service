@@ -1,0 +1,16 @@
+[Unit]
+Description=Turtle Search (FastAPI)
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/var/www/turtle
+EnvironmentFile=/var/www/turtle/.env
+ExecStart=/var/www/turtle/venv/bin/uvicorn server:app --host 127.0.0.1 --port 8002
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
